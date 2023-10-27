@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "106663950932",
+    "project_id": "edu4dev-466e0",
+    "storage_bucket": "edu4dev-466e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106663950932:android:f97df8bf3bea8ff7e1cbc1",
+        "android_client_info": {
+          "package_name": "com.example.edu4dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAvoylZ3k3gllWKDoP2O0NbSByuRJHbxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
