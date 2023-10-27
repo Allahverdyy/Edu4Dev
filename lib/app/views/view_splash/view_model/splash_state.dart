@@ -1,9 +1,14 @@
 abstract class SplashState {
-  SplashState();
+  bool isNewUser;
+  bool isVersionCheck;
+  SplashState({required this.isNewUser, required this.isVersionCheck});
 }
 
 class SplashInitialState extends SplashState {
   @override
-  SplashInitialState()
-      : super();
+  bool isNewUser;
+  @override
+  bool isVersionCheck;
+  SplashInitialState(this.isNewUser, this.isVersionCheck)
+      : super(isNewUser: isNewUser, isVersionCheck: isVersionCheck);
 }

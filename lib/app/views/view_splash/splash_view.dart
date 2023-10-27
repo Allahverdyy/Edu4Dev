@@ -1,15 +1,21 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:edu4dev/app/l10n/app_localizations.dart';
+import 'package:edu4dev/app/views/view_splash/view_model/splash_event.dart';
+import 'package:edu4dev/app/views/view_splash/view_model/splash_state.dart';
 import 'package:edu4dev/app/views/view_splash/view_model/splash_view_model.dart';
 import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+@RoutePage()
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SplashViewModel(),
-      child: Scaffold(
+      create: (context) => SplashViewModel()..add(SplashInitialEvent(context)),
+      child: BlocBuilder<SplashViewModel, SplashState>(builder: (context, state) {
+        return Scaffold(
           body: Container(
         width: MediaQuery.sizeOf(context).width,
         decoration: const BoxDecoration(
@@ -32,8 +38,8 @@ class SplashView extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const Text(
-                'EDU4TECH \nDEVELOPER PLATFORM',
+              Text(
+                L10n.of(context)!.splashEdu4Tech,
                 style: TextStyle(
                   fontSize: 25,
                   fontFamily: 'Georgia',
@@ -43,7 +49,10 @@ class SplashView extends StatelessWidget {
             ],
           ),
         ),
-      )),
+      ));
+      },)
+      
+      
     );
   }
 }
