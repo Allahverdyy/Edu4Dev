@@ -29,7 +29,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  Locale _locale = const Locale('tr', 'TR');
+  Locale _locale = const Locale('en', 'US');
   ThemeData _themeData = AppThemeLight.getTheme();
 
   changeTheme(ThemeData themeData) {

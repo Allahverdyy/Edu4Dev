@@ -98,6 +98,24 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'EDU4TECH DEVELOPER PLATFORM'**
   String get splashEdu4Tech;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @getStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Start'**
+  String get getStarted;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

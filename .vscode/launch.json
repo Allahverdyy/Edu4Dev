@@ -7,11 +7,13 @@
         
         {
             "name": "Edu4Dev",
+            "program": "lib/app/app.dart",
             "request": "launch",
             "type": "dart"
         },
         {
             "name": "Edu4Dev (profile mode)",
+            "program": "lib/app/app.dart",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"

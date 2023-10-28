@@ -18,12 +18,17 @@ class $AssetsImagesGen {
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
 
+  /// File path: assets/images/png/images_onboardingbgtwo.png
+  AssetGenImage get imagesOnboardingbgtwo =>
+      const AssetGenImage('assets/images/png/images_onboardingbgtwo.png');
+
   /// File path: assets/images/png/images_splash_view_logo.png
   AssetGenImage get imagesSplashViewLogo =>
       const AssetGenImage('assets/images/png/images_splash_view_logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [imagesSplashViewLogo];
+  List<AssetGenImage> get values =>
+      [imagesOnboardingbgtwo, imagesSplashViewLogo];
 }
 
 class Assets {

@@ -1,132 +1,94 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:dots_indicator/dots_indicator.dart';
+import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_event.dart';
+import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_state.dart';
+import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_view_model.dart';
+import 'package:edu4dev/core/constant/light_theme_color_constant.dart';
+import 'package:edu4dev/core/extentions/context_extension.dart';
+import 'package:edu4dev/core/widgets/onboarding_widgets.dart';
+import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class OnboardingView extends StatelessWidget {
-  OnboardingView({super.key});
-  PageController _pageController = PageController();
+  const OnboardingView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: MediaQuery.of(context).size.height * 1,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          PageView.builder(
-            controller: _pageController,
-            itemCount: onboardingPages(context).length,
-            itemBuilder: (context, index) {
-              return Column(
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: context.atopRight,
+            end: context.abottomRight,
+            colors: [ AppLightColorConstants.onBoardingColor, AppLightColorConstants.onBoardingColorOne],
+          ),
+        ),
+        child: BlocProvider(
+          create: (context) => OnboardingBloc(),
+          child: BlocBuilder<OnboardingBloc, OnboardingStates>(
+            builder: (context, state) {
+              return Stack(
+                alignment: context.acenter,
                 children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * .15,
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 2,
-                    height: MediaQuery.of(context).size.height * 0.35,
-                    child: Image.asset(
-                      onboardingPages(context)[index][1]!,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                        3,
-                        (pageIndex) => Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 5),
-                              child: AnimatedContainer(
-                                curve: Curves.easeIn,
-                                duration: Duration(milliseconds: 500),
-                                width: pageIndex == index
-                                    ? MediaQuery.of(context).size.width * 0.04
-                                    : MediaQuery.of(context).size.width * 0.08,
-                                height:
-                                    MediaQuery.of(context).size.height * 0.008,
-                                decoration: BoxDecoration(
-                                    color: pageIndex == index
-                                        ? Color.fromRGBO(48, 79, 254, 1)
-                                        : Colors.grey,
-                                    borderRadius: BorderRadius.circular(32)),
-                              ),
-                            )),
-                  ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.005),
-                  Container(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.25,
-                    padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-                    child: Text(
-                      onboardingPages(context)[index][0]!,
-                      style: const TextStyle(
-                        // color: context.isDark
-                        //   ? Colors.white
-                        //   : Colors.black,
-                        fontSize: 34,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Poppins',
-                        height: 1,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-                  GestureDetector(
-                    onTap: () {
-                      // context.read<OnboardingViewModel>().add(
-                      //     IndicatorIncrementEvent(
-                      //         index, context, pageController));
+                  PageView(
+                    controller: controller,
+                    onPageChanged: (value) {
+                      state.pageIndex = value;
+                      BlocProvider.of<OnboardingBloc>(context)
+                          .add(OnboardingEvents());
                     },
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20,
+                    children: [
+                      OnboardingWidget(
+                        context: context,
+                        pageIndex: 0,
+                        image: Assets.images.png.imagesSplashViewLogo.path,
+                        title: 'Boost Productivity',
+                        desc:
+                            'Elevate your productivity to new heights and grow with us',
                       ),
-                      width: double.infinity,
-                      height: MediaQuery.of(context).size.height * 0.06,
-                      decoration: BoxDecoration(
-                        color: const Color.fromRGBO(48, 79, 254, 1),
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                      OnboardingWidget(
+                        context: context,
+                        pageIndex: 1,
+                        image: Assets.images.png.imagesOnboardingbgtwo.path,
+                        title: 'Work Seamlessly',
+                        desc:
+                            'Get your work done seamlessly without interruption',
                       ),
-                      child: Center(
-                        child: Text(
-                          // L10n.of(context)!.next,
-                          '',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: 'Poppins'),
-                        ),
+                      OnboardingWidget(
+                        context: context,
+                        pageIndex: 2,
+                        image: Assets.images.png.imagesSplashViewLogo.path,
+                        title: 'Achieve Higher Goals',
+                        desc:
+                            'By boosting your producivity we help you achieve higher goals',
+                      ),
+                    ],
+                  ),
+                  Positioned(
+                    bottom: 100,
+                    child: DotsIndicator(
+                      dotsCount: 3,
+                      position: BlocProvider.of<OnboardingBloc>(context)
+                          .state
+                          .pageIndex,
+                      decorator: DotsDecorator(
+                        color: Colors.white.withOpacity(0.2),
+                        activeColor: Colors.white,
+                        size: const Size.square(9.0),
+                        activeSize: const Size(36.0, 9.0),
+                        activeShape: RoundedRectangleBorder(
+                            borderRadius: context.bordercirnormal),
                       ),
                     ),
                   ),
                 ],
               );
             },
-          )
-        ],
+          ),
+        ),
       ),
     );
-  }
-
-  List onboardingPages(BuildContext context) {
-    return [
-      [
-        // L10n.of(context)!.onboardFirstTitle,
-        // Assets.images.png.imageOnboardingFirst.path
-      ],
-      [
-        // L10n.of(context)!.onboardSecondTitle,
-        // Assets.images.png.imageOnboardingSecond.path
-      ],
-      [
-        // L10n.of(context)!.onboardThirdTitle,
-        // Assets.images.png.imageOnboardingThird.path
-      ],
-    ];
   }
 }

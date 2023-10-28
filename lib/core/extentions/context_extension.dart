@@ -119,8 +119,73 @@ extension SizedBoxNum on BuildContext {
   SizedBox get sizedHeightBoxMedium => const SizedBox(height: 24);
   SizedBox get sizedHeightBoxHigh => const SizedBox(height: 32);
 
-  SizedBox get sizedWidthBoxLow => const SizedBox(width: 8);
+  SizedBox get sizedWidthBoxLow => const SizedBox(width: 8.0);
   SizedBox get sizedWidthBoxNormal => const SizedBox(width: 16);
   SizedBox get sizedWidthBoxMedium => const SizedBox(width: 24);
   SizedBox get sizedWidthBoxHigh => const SizedBox(width: 32);
+}
+
+extension MainaxisAlignment on BuildContext {
+  MainAxisAlignment get center => MainAxisAlignment.center;
+  MainAxisAlignment get end => MainAxisAlignment.end;
+  MainAxisAlignment get spaceAround => MainAxisAlignment.spaceAround;
+  MainAxisAlignment get spaceBetween => MainAxisAlignment.spaceBetween;
+  MainAxisAlignment get spaceEvenly => MainAxisAlignment.spaceEvenly;
+  MainAxisAlignment get start => MainAxisAlignment.start;
+}
+
+extension CrossAxisalignment on BuildContext {
+  CrossAxisAlignment get ccenter => CrossAxisAlignment.center;
+  CrossAxisAlignment get ccend => CrossAxisAlignment.end;
+  CrossAxisAlignment get ccbaseline => CrossAxisAlignment.baseline;
+  CrossAxisAlignment get ccstart => CrossAxisAlignment.start;
+  CrossAxisAlignment get ccstretch => CrossAxisAlignment.stretch;
+}
+
+extension Aligment on BuildContext {
+  Alignment get acenter => Alignment.center;
+  Alignment get abottomCenter => Alignment.bottomCenter;
+  Alignment get abottomLeft => Alignment.bottomLeft;
+  Alignment get abottomRight => Alignment.bottomRight;
+  Alignment get acenterLeft => Alignment.centerLeft;
+  Alignment get acenterRight => Alignment.centerRight;
+  Alignment get atopCenter => Alignment.topCenter;
+  Alignment get atopLeft => Alignment.topLeft;
+  Alignment get atopRight => Alignment.topRight;
+}
+
+extension TextAlignment on BuildContext {
+  TextAlign get textcenter => TextAlign.center;
+  TextAlign get textend => TextAlign.end;
+  TextAlign get textjustify => TextAlign.justify;
+  TextAlign get textleft => TextAlign.left;
+  TextAlign get textright => TextAlign.right;
+  TextAlign get textstart => TextAlign.start;
+}
+
+extension BorderExtension on BuildContext {
+  BorderRadius get borderlow => BorderRadius.all(lowRadius);
+  BorderRadius get bordernormal => BorderRadius.all(normalRadius);
+  BorderRadius get borderhigh => BorderRadius.all(highRadius);
+
+  BorderRadius get borderzero => BorderRadius.zero;
+  BorderRadius get bordercirlow => BorderRadius.circular(lowValue);
+  BorderRadius get bordercirnormal => BorderRadius.circular(normalValue);
+  BorderRadius get bordercirmedium => BorderRadius.circular(mediumValue);
+  BorderRadius get bordercirhigh => BorderRadius.circular(highValue);
+
+  BorderRadius get borderhorlefthigh =>
+      BorderRadius.horizontal(left: highRadius);
+  BorderRadius get borderhorleftlow => BorderRadius.horizontal(left: lowRadius);
+  BorderRadius get borderhorrightlow =>
+      BorderRadius.horizontal(right: lowRadius);
+  BorderRadius get borderhorrighthigh =>
+      BorderRadius.horizontal(right: highRadius);
+
+  BorderRadius get borderverttoplow => BorderRadius.vertical(top: lowRadius);
+  BorderRadius get borderverttophight => BorderRadius.vertical(top: highRadius);
+  BorderRadius get bordervertbottomlow =>
+      BorderRadius.vertical(bottom: lowRadius);
+  BorderRadius get bordervertbottomhigh =>
+      BorderRadius.vertical(bottom: highRadius);
 }

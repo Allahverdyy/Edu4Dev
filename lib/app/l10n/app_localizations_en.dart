@@ -6,4 +6,13 @@ class L10nEn extends L10n {
 
   @override
   String get splashEdu4Tech => 'EDU4TECH DEVELOPER PLATFORM';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get getStarted => 'Get Start';
 }

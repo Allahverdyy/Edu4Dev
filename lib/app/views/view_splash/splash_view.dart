@@ -3,6 +3,7 @@ import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/app/views/view_splash/view_model/splash_event.dart';
 import 'package:edu4dev/app/views/view_splash/view_model/splash_state.dart';
 import 'package:edu4dev/app/views/view_splash/view_model/splash_view_model.dart';
+import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,11 +18,11 @@ class SplashView extends StatelessWidget {
       child: BlocBuilder<SplashViewModel, SplashState>(builder: (context, state) {
         return Scaffold(
           body: Container(
-        width: MediaQuery.sizeOf(context).width,
-        decoration: const BoxDecoration(
+        width: context.width,
+        decoration: BoxDecoration(
             gradient: LinearGradient(
-          begin: Alignment.bottomLeft,
-          end: Alignment.topRight,
+          begin: context.abottomLeft,
+          end: context.atopRight,
           colors: <Color>[
             Color.fromARGB(255, 239, 250, 255),
             Color.fromARGB(255, 203, 245, 255),
@@ -32,7 +33,7 @@ class SplashView extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: MediaQuery.sizeOf(context).height / 3,
+                height: context.height / 3,
               ),
               Image.asset(Assets.images.png.imagesSplashViewLogo.path),
               const SizedBox(
@@ -40,11 +41,11 @@ class SplashView extends StatelessWidget {
               ),
               Text(
                 L10n.of(context)!.splashEdu4Tech,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 25,
                   fontFamily: 'Georgia',
                 ),
-                textAlign: TextAlign.center,
+                textAlign: context.textcenter,
               )
             ],
           ),

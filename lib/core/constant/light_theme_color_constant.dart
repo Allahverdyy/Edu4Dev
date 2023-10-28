@@ -70,4 +70,7 @@ final class AppLightColorConstants {
 
   //TextInputBorder
   static const Color textInputBorderColor = Color(0xFFb8b8b8);
+
+  static const Color onBoardingColor = Color.fromARGB(255, 133, 196, 228);
+  static const Color onBoardingColorOne = Color.fromARGB(255, 133, 196, 228);
 }
