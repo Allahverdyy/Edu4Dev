@@ -19,6 +19,11 @@ dependencies:
   #localization
   intl: ^0.18.1
   dots_indicator: ^3.0.0
+  # hive
+  hive_generator: ^2.0.1
+  flavor: ^2.0.0
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
 
 dev_dependencies:
   flutter_test:
