@@ -1,4 +1,4 @@
-import 'package:edu4dev/core/constant/light_theme_color_constant.dart';
+import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:flutter/material.dart';
 
 final class AppThemeLight {

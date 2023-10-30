@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/app/routes/app_router.gr.dart';
 import 'package:edu4dev/app/views/view_splash/splash_view.dart';
-import 'package:edu4dev/core/constant/light_theme_color_constant.dart';
+import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,7 @@ Widget OnboardingWidget({
   required title,
   required desc,
   required BuildContext context,
+  required void Function()? ontap
 }) {
   return Column(
     mainAxisAlignment: context.center,
@@ -48,9 +49,7 @@ Widget OnboardingWidget({
               visible:
                   pageIndex != 2, // don't show on page with index 2 (last page)
               child: GestureDetector(
-                onTap: () {
-                  context.router.push(const SplashViewRoute());
-                },
+                onTap: ontap,
                 child: Text(
                   L10n.of(context)!.skip,
                   textAlign: context.textcenter,
@@ -63,16 +62,7 @@ Widget OnboardingWidget({
               ),
             ),
             GestureDetector(
-              onTap: () {
-                pageIndex == 2
-                    ? Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) {
-                        return const SplashView();
-                      }))
-                    : controller.animateToPage(pageIndex + 1,
-                        duration: context.durationLow,
-                        curve: Curves.decelerate);
-              },
+              onTap: ontap,
               child: pageIndex == 2
                   ? Container(
                       width: context.width / 3,

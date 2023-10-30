@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:edu4dev/app/routes/app_router.gr.dart';
 import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_event.dart';
 import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_state.dart';
 import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_view_model.dart';
-import 'package:edu4dev/core/constant/light_theme_color_constant.dart';
+import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:edu4dev/core/widgets/onboarding_widgets.dart';
 import 'package:edu4dev/gen/assets.gen.dart';
@@ -41,6 +42,9 @@ class OnboardingView extends StatelessWidget {
                     },
                     children: [
                       OnboardingWidget(
+                        ontap: () {
+                          context.router.push(const SignUpViewRoute());
+                        },
                         context: context,
                         pageIndex: 0,
                         image: Assets.images.png.imagesSplashViewLogo.path,
@@ -49,6 +53,9 @@ class OnboardingView extends StatelessWidget {
                             'Elevate your productivity to new heights and grow with us',
                       ),
                       OnboardingWidget(
+                        ontap: () {
+                          context.router.push(const SignInViewRoute());
+                        },
                         context: context,
                         pageIndex: 1,
                         image: Assets.images.png.imagesOnboardingbgtwo.path,
@@ -57,6 +64,9 @@ class OnboardingView extends StatelessWidget {
                             'Get your work done seamlessly without interruption',
                       ),
                       OnboardingWidget(
+                        ontap: () {
+                          context.router.push(const SignUpViewRoute());
+                        },
                         context: context,
                         pageIndex: 2,
                         image: Assets.images.png.imagesSplashViewLogo.path,
