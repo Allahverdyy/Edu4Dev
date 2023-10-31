@@ -73,4 +73,8 @@ final class AppLightColorConstants {
 
   static const Color onBoardingColor = Color.fromARGB(255, 133, 196, 228);
   static const Color onBoardingColorOne = Color.fromARGB(255, 133, 196, 228);
+
+  static Color whiteteam1 = Colors.white.withOpacity(0.5);
+  static Color whiteteam2 = Colors.white.withOpacity(0.15);
+  static Color whiteteam3 = Colors.white.withOpacity(0.13);
 }
