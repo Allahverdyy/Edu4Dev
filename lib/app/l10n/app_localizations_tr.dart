@@ -15,4 +15,7 @@ class L10nTr extends L10n {
 
   @override
   String get getStarted => 'Hadi Başla';
+
+  @override
+  String get myProfile => 'Profilim';
 }

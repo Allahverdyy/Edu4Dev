@@ -116,6 +116,12 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Get Start'**
   String get getStarted;
+
+  /// No description provided for @myProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get myProfile;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

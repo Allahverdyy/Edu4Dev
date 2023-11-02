@@ -9,7 +9,7 @@ class NavBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: const [HomeViewRoute(), HomeViewRoute(), HomeViewRoute(), HomeViewRoute(), HomeViewRoute()],
+      routes: const [HomeViewRoute(), HomeViewRoute(), HomeViewRoute(), HomeViewRoute(), ProfileViewRoute()],
       bottomNavigationBuilder: (context, tabsRouter) {
         return BottomNavigationBar(
             items: bottomNavItems,
