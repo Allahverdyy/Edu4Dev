@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_event.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_state.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_view_model.dart';
@@ -23,14 +24,14 @@ class SignInView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'HOŞGELDİNİZ',
+                Text(
+                  L10n.of(context)!.welcome,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Row(
                   children: [
-                    const Text(
-                      'Hesabınız yok mu?',
+                    Text(
+                      L10n.of(context)!.already,
                     ),
                     TextButton(
                         onPressed: () {
@@ -43,16 +44,16 @@ class SignInView extends StatelessWidget {
                 Column(
                   children: [
                     textInput(
-                        'E-mail',
-                        'E-mail',
+                        L10n.of(context)!.email,
+                        L10n.of(context)!.emailWrite,
                         context,
                         const Icon(Icons.email_outlined),
                         context.read<SignInViewModel>().emailController,
                         ),
                         
                     textInput(
-                        'Password',
-                        'Password',
+                        L10n.of(context)!.password,
+                        L10n.of(context)!.password,
                         context,
                         const Icon(Icons.key),
                         context.read<SignInViewModel>().passwordController),
@@ -65,7 +66,7 @@ class SignInView extends StatelessWidget {
                                   .read<SignInViewModel>()
                                   .add(SignInInitialEvent(context));
                             },
-                            child: const Text('Giriş Yap')))
+                            child: Text(L10n.of(context)!.login)))
                   ],
                 )
               ],

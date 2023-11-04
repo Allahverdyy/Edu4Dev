@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/app/routes/app_router.gr.dart';
 import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_event.dart';
 import 'package:edu4dev/app/views/view_onboarding/view_model/onboarding_state.dart';
@@ -48,9 +49,9 @@ class OnboardingView extends StatelessWidget {
                         context: context,
                         pageIndex: 0,
                         image: Assets.images.png.imagesSplashViewLogo.path,
-                        title: 'Boost Productivity',
+                        title: L10n.of(context)!.boost,
                         desc:
-                            'Elevate your productivity to new heights and grow with us',
+                            L10n.of(context)!.onboardingonetittle,
                       ),
                       OnboardingWidget(
                         ontap: () {
@@ -59,9 +60,9 @@ class OnboardingView extends StatelessWidget {
                         context: context,
                         pageIndex: 1,
                         image: Assets.images.png.imagesOnboardingbgtwo.path,
-                        title: 'Work Seamlessly',
+                        title: L10n.of(context)!.workSeamlessly,
                         desc:
-                            'Get your work done seamlessly without interruption',
+                           L10n.of(context)!.seamlessly,
                       ),
                       OnboardingWidget(
                         ontap: () {
@@ -70,9 +71,9 @@ class OnboardingView extends StatelessWidget {
                         context: context,
                         pageIndex: 2,
                         image: Assets.images.png.imagesSplashViewLogo.path,
-                        title: 'Achieve Higher Goals',
+                        title: L10n.of(context)!.achieveHigherGoals,
                         desc:
-                            'By boosting your producivity we help you achieve higher goals',
+                            L10n.of(context)!.byboosting,
                       ),
                     ],
                   ),

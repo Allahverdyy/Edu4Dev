@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/app/views/view_signin/view/signin_view.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_event.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_state.dart';
@@ -27,17 +28,17 @@ class SignUpView extends StatelessWidget {
                   child: Center(
                     child: Column(
                       children: [
-                        const Row(
+                         Row(
                           children: [
-                            Text('Kayıt ol',
+                            Text(L10n.of(context)!.signup,
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold)),
                           ],
                         ),
                         Row(
                           children: [
-                            const Text(
-                              'Zaten hesabınız var mı?',
+                           Text(
+                             L10n.of(context)!.already,
                               style: TextStyle(fontSize: 18),
                             ),
                             TextButton(
@@ -46,35 +47,35 @@ class SignUpView extends StatelessWidget {
                                   builder: (context) => const SignInView(),
                                 ));
                               },
-                              child: const Text('Giriş yap'),
+                              child:Text(L10n.of(context)!.login),
                             ),
                           ],
                         ),
-                        textInput('İsim', 'isminizi giriniz', context,
+                        textInput(L10n.of(context)!.name, L10n.of(context)!.nameWrite, context,
                             context.read<SignUpViewModel>().nameController),
-                        textInput('Soyad', 'Soyadınızı giriniz', context,
+                        textInput(L10n.of(context)!.surname, L10n.of(context)!.surnameWrite, context,
                             context.read<SignUpViewModel>().surNameController),
                         textInput(
-                          'Şifre',
-                          'şifrenizi giriniz',
+                          L10n.of(context)!.password,
+                          L10n.of(context)!.passwordWrite,
                           context,
                           context.read<SignUpViewModel>().passwordController,
                         ),
                         textInput(
-                          'E-posta',
-                          'e-posta adresinizi giriniz',
+                          L10n.of(context)!.email,
+                          L10n.of(context)!.emailWrite,
                           context,
                           context.read<SignUpViewModel>().emailController,
                         ),
                         textInput(
-                          'Telefon',
-                          'telefon numaranızı giriniz',
+                          L10n.of(context)!.number,
+                          L10n.of(context)!.numberWrite,
                           context,
                           context.read<SignUpViewModel>().phoneController,
                         ),
                         textInput(
-                          'Adres',
-                          'adresinizi giriniz',
+                          L10n.of(context)!.address,
+                          L10n.of(context)!.addressWrite,
                           context,
                           context.read<SignUpViewModel>().adressController,
                         ),
@@ -87,7 +88,7 @@ class SignUpView extends StatelessWidget {
                                   .read<SignUpViewModel>()
                                   .add(SignUpInitialEvent(context));
                             },
-                            child: const Text('Kayıt ol'),
+                            child: Text(L10n.of(context)!.signup,),
                           ),
                         ),
                       ],

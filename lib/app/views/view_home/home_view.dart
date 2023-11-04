@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/core/constants/dark_theme_color_constant.dart';
 import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/widgets/glass_effect_button_widgets.dart';
@@ -19,7 +20,7 @@ class HomeView extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Column(
+           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Padding(
@@ -27,7 +28,7 @@ class HomeView extends StatelessWidget {
                 child: SizedBox(
                   height: 50,
                   child: Text(
-                              "ANASAYFA",
+                              L10n.of(context)!.homepage,
                               style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
                                 fontFamily: 'Georgia',
@@ -64,14 +65,14 @@ class HomeView extends StatelessWidget {
                     crossAxisCount: 2,
                     mainAxisSpacing: 15,
                     crossAxisSpacing: 20),
-                children: const [
+                children: [
                   //1. box
-                  GlassEffectButton(text: 'Front-End \nDeveloper'),
-                  GlassEffectButton(text: 'Back-End \nDeveloper'),
-                  GlassEffectButton(text: 'Full Stack \nDeveloper'),
-                  GlassEffectButton(text: 'Software \nDeveloper'),
-                  GlassEffectButton(text: 'Mobile \nDeveloper'),
-                  GlassEffectButton(text: 'Devops \nDeveloper'),
+                  GlassEffectButton(text: L10n.of(context)!.frontEndDev,),
+                  GlassEffectButton(text: L10n.of(context)!.backEndDev),
+                  GlassEffectButton(text: L10n.of(context)!.fullStackDev),
+                  GlassEffectButton(text: L10n.of(context)!.mobileDev),
+                  GlassEffectButton(text: L10n.of(context)!.softwareDev),
+                  GlassEffectButton(text: L10n.of(context)!.devopsDev),
                   
                 ]),
           ))

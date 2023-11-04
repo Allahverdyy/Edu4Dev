@@ -19,20 +19,20 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ProfileViewModel(),
-      child: BlocBuilder<ProfileViewModel,ProfileState>(
+      child: BlocBuilder<ProfileViewModel, ProfileState>(
         builder: (context, state) {
           return Scaffold(
             appBar: CustomAppBar(
-              title: 'L10n Eklenecek',
-                titleTextStyle:
-                    Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          fontWeight: FontWeight.w400,
-                          color: context.isDark ? Colors.white : Colors.black,
-                        ),
-                onPressed: () {
-                  context.router.pop();
-                },
-              ),
+              title: L10n.of(context)!.myProfile,
+              titleTextStyle:
+                  Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontWeight: FontWeight.w400,
+                        color: context.isDark ? Colors.white : Colors.black,
+                      ),
+              onPressed: () {
+                context.router.replace(HomeViewRoute());
+              },
+            ),
             body: Center(
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -70,9 +70,9 @@ class ProfileView extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 30),
-                        const Text('Adiniz Soyadiniz'),
+                        Text(L10n.of(context)!.mail),
                         const SizedBox(height: 30),
-                        const Text('Adiniz Soyadiniz'),
+                        Text(L10n.of(context)!.fullName),
                       ],
                     ),
                   ),
@@ -88,7 +88,7 @@ class ProfileView extends StatelessWidget {
                       children: [
                         ProfileListWidgets(
                             leading: const Icon(Icons.dark_mode_outlined),
-                            title: 'Dark Mode',
+                            title: L10n.of(context)!.darkMode,
                             trailing: CupertinoSwitch(
                               value:
                                   context.read<ProfileViewModel>().state.isDark
@@ -104,16 +104,17 @@ class ProfileView extends StatelessWidget {
                         ProfileListWidgets(
                           ontap: () {},
                           leading: const Icon(Icons.abc),
-                          title: 'My Cv',
+                          title: L10n.of(context)!.myCv,
                           trailing: const Icon(Icons.arrow_forward_ios_sharp),
                         ),
                         const Divider(
                           thickness: 1,
                         ),
                         ProfileListWidgets(
-                          ontap: () {},
+                          ontap: () {
+                          },
                           leading: const Icon(Icons.settings),
-                          title: 'Settings',
+                          title: L10n.of(context)!.settings,
                           trailing: const Icon(Icons.arrow_forward_ios_sharp),
                         ),
                         const Divider(
@@ -124,7 +125,7 @@ class ProfileView extends StatelessWidget {
                             context.router.replace(const SignInViewRoute());
                           },
                           leading: const Icon(Icons.logout_rounded),
-                          title: 'Log Out',
+                          title: L10n.of(context)!.logout,
                           trailing: const Icon(Icons.arrow_forward_ios_sharp),
                         )
                       ],

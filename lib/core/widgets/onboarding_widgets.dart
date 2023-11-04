@@ -62,7 +62,13 @@ Widget OnboardingWidget({
               ),
             ),
             GestureDetector(
-              onTap: ontap,
+              onTap: () {
+                pageIndex == 2
+                    ? context.router.push(SignUpViewRoute())
+                    : controller.animateToPage(pageIndex + 1,
+                        duration: context.durationLow,
+                        curve: Curves.decelerate);
+              },
               child: pageIndex == 2
                   ? Container(
                       width: context.width / 3,
