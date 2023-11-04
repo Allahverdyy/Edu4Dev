@@ -122,6 +122,246 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Profile'**
   String get myProfile;
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// No description provided for @darkMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark Mode'**
+  String get darkMode;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Log Out'**
+  String get logout;
+
+  /// No description provided for @frontEndDev.
+  ///
+  /// In en, this message translates to:
+  /// **'Front-End Developer'**
+  String get frontEndDev;
+
+  /// No description provided for @backEndDev.
+  ///
+  /// In en, this message translates to:
+  /// **'Back-End Developer'**
+  String get backEndDev;
+
+  /// No description provided for @fullStackDev.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Stack Developer'**
+  String get fullStackDev;
+
+  /// No description provided for @mobileDev.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Developer'**
+  String get mobileDev;
+
+  /// No description provided for @softwareDev.
+  ///
+  /// In en, this message translates to:
+  /// **'Software Developer'**
+  String get softwareDev;
+
+  /// No description provided for @devopsDev.
+  ///
+  /// In en, this message translates to:
+  /// **'Devops Developer'**
+  String get devopsDev;
+
+  /// No description provided for @homepage.
+  ///
+  /// In en, this message translates to:
+  /// **'HOME'**
+  String get homepage;
+
+  /// No description provided for @mail.
+  ///
+  /// In en, this message translates to:
+  /// **'samet@gmai.co'**
+  String get mail;
+
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Abdulsamed Tanriverdi'**
+  String get fullName;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @category.
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get category;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @fav.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorite'**
+  String get fav;
+
+  /// No description provided for @welcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get welcome;
+
+  /// No description provided for @haveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t you have an account?'**
+  String get haveAccount;
+
+  /// No description provided for @signup.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signup;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'E-mail'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @already.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get already;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// No description provided for @surname.
+  ///
+  /// In en, this message translates to:
+  /// **'Surname'**
+  String get surname;
+
+  /// No description provided for @nameWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your name'**
+  String get nameWrite;
+
+  /// No description provided for @surnameWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your surname'**
+  String get surnameWrite;
+
+  /// No description provided for @passwordWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your password'**
+  String get passwordWrite;
+
+  /// No description provided for @emailWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email'**
+  String get emailWrite;
+
+  /// No description provided for @numberWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your number'**
+  String get numberWrite;
+
+  /// No description provided for @addressWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your address'**
+  String get addressWrite;
+
+  /// No description provided for @number.
+  ///
+  /// In en, this message translates to:
+  /// **'Number'**
+  String get number;
+
+  /// No description provided for @address.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get address;
+
+  /// No description provided for @boost.
+  ///
+  /// In en, this message translates to:
+  /// **'Boost Productivity '**
+  String get boost;
+
+  /// No description provided for @onboardingonetittle.
+  ///
+  /// In en, this message translates to:
+  /// **'Elevate your productivity to new heights and grow with us'**
+  String get onboardingonetittle;
+
+  /// No description provided for @workSeamlessly.
+  ///
+  /// In en, this message translates to:
+  /// **'Get your work done seamlessly without interruption'**
+  String get workSeamlessly;
+
+  /// No description provided for @achieveHigherGoals.
+  ///
+  /// In en, this message translates to:
+  /// **'Achieve Higher Goals'**
+  String get achieveHigherGoals;
+
+  /// No description provided for @byboosting.
+  ///
+  /// In en, this message translates to:
+  /// **'By boosting your producivity we help you achieve higher goals'**
+  String get byboosting;
+
+  /// No description provided for @seamlessly.
+  ///
+  /// In en, this message translates to:
+  /// **'Work Seamlessly'**
+  String get seamlessly;
+
+  /// No description provided for @myCv.
+  ///
+  /// In en, this message translates to:
+  /// **'My CV'**
+  String get myCv;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
