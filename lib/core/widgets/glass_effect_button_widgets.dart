@@ -34,7 +34,7 @@ class GlassEffectButton extends StatelessWidget {
         child: Stack(
           children: [
             BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
+              filter: ImageFilter.blur(sigmaX: 40.0, sigmaY: 4.0),
               child: Container(),
             ),
             InkWell(
