@@ -4,9 +4,23 @@ import 'package:flutter/material.dart';
 
 class GlassEffectButton extends StatelessWidget {
   final String text;
+  final void Function()? ontap;
+  final void Function(bool)? onhover;
+  final double? width;
+  final double? height;
+  final double? fontsize;
+  final String? fontfamily;
+  final Color? color;
   const GlassEffectButton({
     super.key,
     required this.text,
+    this.ontap,
+    this.onhover,
+    this.width,
+    this.height,
+    this.fontsize = 16,
+    this.fontfamily = 'Georgia',
+    this.color 
   });
 
   @override
@@ -14,8 +28,8 @@ class GlassEffectButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        width: MediaQuery.sizeOf(context).width * 4 / 5,
-        height: MediaQuery.sizeOf(context).height / 6,
+        width: width,
+        height: height,
         color: Colors.transparent,
         child: Stack(
           children: [
@@ -24,7 +38,8 @@ class GlassEffectButton extends StatelessWidget {
               child: Container(),
             ),
             InkWell(
-              onTap: () {},
+              onTap: ontap,
+              onHover: onhover,
               child: Container(
                 decoration: BoxDecoration(
                     border:
@@ -37,10 +52,13 @@ class GlassEffectButton extends StatelessWidget {
                 child: Center(
                     child: Text(
                   text,
-                  style: const TextStyle(
-                      fontFamily: 'Georgia',
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontFamily: fontfamily,
+                      fontSize: fontsize,
+                      fontWeight: FontWeight.bold,
+                      color: color
+                      
+                      ),
                 )),
               ),
             )

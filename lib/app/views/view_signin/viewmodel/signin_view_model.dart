@@ -39,7 +39,7 @@ class SignInViewModel extends Bloc<SignInEvent, SignInState> {
             subTitle: 'Giriş başarılı, ana sayfaya yönlendiriliyorsunuz...',
           )));
       Future.delayed(const Duration(seconds: 1), () {
-        context.router.push(const NavBarViewRoute());
+        context.router.push(const WelcomeViewRoute());
       });
     } catch (e, stack) {
       FirebaseCrashlytics.instance.recordError(e, stack, fatal: true);

@@ -18,6 +18,10 @@ class $AssetsImagesGen {
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
 
+  /// File path: assets/images/png/images_home_view_bg.png
+  AssetGenImage get imagesHomeViewBg =>
+      const AssetGenImage('assets/images/png/images_home_view_bg.png');
+
   /// File path: assets/images/png/images_onboardingbgtwo.png
   AssetGenImage get imagesOnboardingbgtwo =>
       const AssetGenImage('assets/images/png/images_onboardingbgtwo.png');
@@ -26,9 +30,17 @@ class $AssetsImagesPngGen {
   AssetGenImage get imagesSplashViewLogo =>
       const AssetGenImage('assets/images/png/images_splash_view_logo.png');
 
+  /// File path: assets/images/png/images_welcome_view_logo.png
+  AssetGenImage get imagesWelcomeViewLogo =>
+      const AssetGenImage('assets/images/png/images_welcome_view_logo.png');
+
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [imagesOnboardingbgtwo, imagesSplashViewLogo];
+  List<AssetGenImage> get values => [
+        imagesHomeViewBg,
+        imagesOnboardingbgtwo,
+        imagesSplashViewLogo,
+        imagesWelcomeViewLogo
+      ];
 }
 
 class Assets {
