@@ -147,4 +147,10 @@ class L10nEn extends L10n {
 
   @override
   String get orContinue => 'Or continue with';
+
+  @override
+  String get edu4TechDevPlatform => 'Edu4Tech \nDeveloper Platform';
+
+  @override
+  String get edu4TechWelcomeSign => 'Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.';
 }

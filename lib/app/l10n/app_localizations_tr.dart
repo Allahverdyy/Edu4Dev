@@ -147,4 +147,10 @@ class L10nTr extends L10n {
 
   @override
   String get orContinue => 'Yada şununla devam et';
+
+  @override
+  String get edu4TechDevPlatform => 'Edu4Tech \nGeliştirici Platformu';
+
+  @override
+  String get edu4TechWelcomeSign => 'Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv\'ni yükle.';
 }

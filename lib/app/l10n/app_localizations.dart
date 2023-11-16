@@ -380,6 +380,18 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Or continue with'**
   String get orContinue;
+
+  /// No description provided for @edu4TechDevPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'Edu4Tech \nDeveloper Platform'**
+  String get edu4TechDevPlatform;
+
+  /// No description provided for @edu4TechWelcomeSign.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.'**
+  String get edu4TechWelcomeSign;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

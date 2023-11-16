@@ -46,5 +46,7 @@
   "myCv":"CVlerim",
   "welcome":"Hoşgeldin",
   "forgotPassword":"Parolami Unuttum?",
-  "orContinue":"Yada şununla devam et"
+  "orContinue":"Yada şununla devam et",
+  "edu4TechDevPlatform":"Edu4Tech \nGeliştirici Platformu",
+  "edu4TechWelcomeSign":"Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv'ni yükle."
 }
