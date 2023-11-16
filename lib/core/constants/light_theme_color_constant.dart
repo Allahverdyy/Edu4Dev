@@ -77,4 +77,7 @@ final class AppLightColorConstants {
   static Color whiteteam1 = Colors.white.withOpacity(0.5);
   static Color whiteteam2 = Colors.white.withOpacity(0.15);
   static Color whiteteam3 = Colors.white.withOpacity(0.13);
+
+  static Color? greyteam1 = Colors.grey[700];
+  static Color? greyteam2 = Colors.grey[300];
 }
