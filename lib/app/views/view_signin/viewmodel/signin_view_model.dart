@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:edu4dev/app/routes/app_router.gr.dart';
-import 'package:edu4dev/app/views/view_home/home_view.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_event.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_state.dart';
 import 'package:edu4dev/core/repository/model/auth/sign%20in/signin_request_model.dart';
 import 'package:edu4dev/core/repository/services/auth_service.dart';
-import 'package:edu4dev/core/widgets/navbar/navbar.dart';
 import 'package:edu4dev/core/widgets/snackbar_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';

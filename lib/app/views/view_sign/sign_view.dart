@@ -18,29 +18,26 @@ class SignView extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage(Assets.images.png.imagesHomeViewB.path))),
       child: Scaffold(
-        appBar: AppBar(),
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
             SizedBox(
-              height: context.height * .05,
+              height: context.height * .15,
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Center(
-                  child: Text('Edu4Tech \nDeveloper Platform',
+                  child: Text(L10n.of(context)!.edu4TechDevPlatform,
                       textAlign: context.textcenter,
                       style: const TextStyle(
                           fontSize: 30, fontWeight: FontWeight.bold))),
             ),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Center(
-                  child: Text(
-                      'Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.',
-                      style: TextStyle(
+                  child: Text(L10n.of(context)!.edu4TechWelcomeSign,
+                      style: const TextStyle(
                         fontSize: 16,
-                        // color: AppLightColorConstants.divider,
                       ))),
             ),
             SizedBox(

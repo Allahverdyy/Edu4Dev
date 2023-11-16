@@ -1,9 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:edu4dev/app/l10n/app_localizations.dart';
-import 'package:edu4dev/core/constants/dark_theme_color_constant.dart';
 import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
-import 'package:edu4dev/core/widgets/glass_effect_button_widgets.dart';
-import 'package:edu4dev/core/widgets/home_button_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:glass_button_package/glass_button_package.dart';
 
