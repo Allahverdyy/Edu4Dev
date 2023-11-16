@@ -144,37 +144,37 @@ abstract class L10n {
   /// No description provided for @frontEndDev.
   ///
   /// In en, this message translates to:
-  /// **'Front-End Developer'**
+  /// **'Front-End \nDeveloper'**
   String get frontEndDev;
 
   /// No description provided for @backEndDev.
   ///
   /// In en, this message translates to:
-  /// **'Back-End Developer'**
+  /// **'Back-End \nDeveloper'**
   String get backEndDev;
 
   /// No description provided for @fullStackDev.
   ///
   /// In en, this message translates to:
-  /// **'Full Stack Developer'**
+  /// **'Full Stack \nDeveloper'**
   String get fullStackDev;
 
   /// No description provided for @mobileDev.
   ///
   /// In en, this message translates to:
-  /// **'Mobile Developer'**
+  /// **'Mobile \nDeveloper'**
   String get mobileDev;
 
   /// No description provided for @softwareDev.
   ///
   /// In en, this message translates to:
-  /// **'Software Developer'**
+  /// **'Software \nDeveloper'**
   String get softwareDev;
 
   /// No description provided for @devopsDev.
   ///
   /// In en, this message translates to:
-  /// **'Devops Developer'**
+  /// **'Devops \nDeveloper'**
   String get devopsDev;
 
   /// No description provided for @homepage.
@@ -219,11 +219,11 @@ abstract class L10n {
   /// **'Favorite'**
   String get fav;
 
-  /// No description provided for @welcome.
+  /// No description provided for @welcomeback.
   ///
   /// In en, this message translates to:
   /// **'Welcome back you\'ve been missed'**
-  String get welcome;
+  String get welcomeback;
 
   /// No description provided for @haveAccount.
   ///
@@ -362,6 +362,24 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'My CV'**
   String get myCv;
+
+  /// No description provided for @welcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get welcome;
+
+  /// No description provided for @forgotPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot Password?'**
+  String get forgotPassword;
+
+  /// No description provided for @orContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Or continue with'**
+  String get orContinue;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

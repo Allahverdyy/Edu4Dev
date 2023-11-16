@@ -29,22 +29,22 @@ class L10nTr extends L10n {
   String get logout => 'Çıkış Yap';
 
   @override
-  String get frontEndDev => 'Front-End Developer';
+  String get frontEndDev => 'Front-End \nDeveloper';
 
   @override
-  String get backEndDev => 'Back-End Developer';
+  String get backEndDev => 'Back-End \nDeveloper';
 
   @override
-  String get fullStackDev => 'Full Stack Developer';
+  String get fullStackDev => 'Full Stack \nDeveloper';
 
   @override
-  String get mobileDev => 'Mobile Developer';
+  String get mobileDev => 'Mobile \nDeveloper';
 
   @override
-  String get softwareDev => 'Software Developer';
+  String get softwareDev => 'Software \nDeveloper';
 
   @override
-  String get devopsDev => 'Devops Developer';
+  String get devopsDev => 'Devops \nDeveloper';
 
   @override
   String get homepage => 'Anasayfa';
@@ -68,7 +68,7 @@ class L10nTr extends L10n {
   String get fav => 'Favoriler';
 
   @override
-  String get welcome => 'Tekrar hoş geldin, gözlerimiz seni aradı';
+  String get welcomeback => 'Tekrar hoş geldin, gözlerimiz seni aradı';
 
   @override
   String get haveAccount => 'Hesabınız yok mu ?';
@@ -138,4 +138,13 @@ class L10nTr extends L10n {
 
   @override
   String get myCv => 'CVlerim';
+
+  @override
+  String get welcome => 'Hoşgeldin';
+
+  @override
+  String get forgotPassword => 'Parolami Unuttum?';
+
+  @override
+  String get orContinue => 'Yada şununla devam et';
 }

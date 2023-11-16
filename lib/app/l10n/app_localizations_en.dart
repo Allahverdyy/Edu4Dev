@@ -29,22 +29,22 @@ class L10nEn extends L10n {
   String get logout => 'Log Out';
 
   @override
-  String get frontEndDev => 'Front-End Developer';
+  String get frontEndDev => 'Front-End \nDeveloper';
 
   @override
-  String get backEndDev => 'Back-End Developer';
+  String get backEndDev => 'Back-End \nDeveloper';
 
   @override
-  String get fullStackDev => 'Full Stack Developer';
+  String get fullStackDev => 'Full Stack \nDeveloper';
 
   @override
-  String get mobileDev => 'Mobile Developer';
+  String get mobileDev => 'Mobile \nDeveloper';
 
   @override
-  String get softwareDev => 'Software Developer';
+  String get softwareDev => 'Software \nDeveloper';
 
   @override
-  String get devopsDev => 'Devops Developer';
+  String get devopsDev => 'Devops \nDeveloper';
 
   @override
   String get homepage => 'HOME';
@@ -68,7 +68,7 @@ class L10nEn extends L10n {
   String get fav => 'Favorite';
 
   @override
-  String get welcome => 'Welcome back you\'ve been missed';
+  String get welcomeback => 'Welcome back you\'ve been missed';
 
   @override
   String get haveAccount => 'Don\'t you have an account?';
@@ -138,4 +138,13 @@ class L10nEn extends L10n {
 
   @override
   String get myCv => 'My CV';
+
+  @override
+  String get welcome => 'Welcome';
+
+  @override
+  String get forgotPassword => 'Forgot Password?';
+
+  @override
+  String get orContinue => 'Or continue with';
 }
