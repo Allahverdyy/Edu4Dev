@@ -485,6 +485,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.0"
+  glass_button_package:
+    dependency: "direct main"
+    description:
+      name: glass_button_package
+      sha256: "394cf0a90451d599b9899fddae6b7b17214329848eb16aace16946736c71d52e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   glob:
     dependency: transitive
     description:

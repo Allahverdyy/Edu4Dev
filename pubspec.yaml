@@ -30,6 +30,8 @@ dependencies:
   equatable: ^2.0.5
   fluttertoast: ^8.2.2
   firebase_crashlytics: ^3.4.2
+  #mypackages
+  glass_button_package: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -46,3 +48,4 @@ flutter:
  
   assets:
     - assets/images/png/
+    - assets/icons/png/
