@@ -80,4 +80,7 @@ final class AppLightColorConstants {
 
   static Color? greyteam1 = Colors.grey[700];
   static Color? greyteam2 = Colors.grey[300];
+  static Color? greyteam3 = Colors.grey[200];
+  static Color? greyteam4 = Colors.grey[400];
+  static Color? greyteam5 = Colors.grey[600];
 }
