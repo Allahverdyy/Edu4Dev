@@ -28,7 +28,7 @@ class SignUpView extends StatelessWidget {
                   child: Center(
                     child: Column(
                       children: [
-                         Row(
+                        Row(
                           children: [
                             Text(L10n.of(context)!.signup,
                                 style: TextStyle(
@@ -37,8 +37,8 @@ class SignUpView extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                           Text(
-                             L10n.of(context)!.already,
+                            Text(
+                              L10n.of(context)!.already,
                               style: TextStyle(fontSize: 18),
                             ),
                             TextButton(
@@ -47,13 +47,19 @@ class SignUpView extends StatelessWidget {
                                   builder: (context) => const SignInView(),
                                 ));
                               },
-                              child:Text(L10n.of(context)!.login),
+                              child: Text(L10n.of(context)!.signin),
                             ),
                           ],
                         ),
-                        textInput(L10n.of(context)!.name, L10n.of(context)!.nameWrite, context,
+                        textInput(
+                            L10n.of(context)!.name,
+                            L10n.of(context)!.nameWrite,
+                            context,
                             context.read<SignUpViewModel>().nameController),
-                        textInput(L10n.of(context)!.surname, L10n.of(context)!.surnameWrite, context,
+                        textInput(
+                            L10n.of(context)!.surname,
+                            L10n.of(context)!.surnameWrite,
+                            context,
                             context.read<SignUpViewModel>().surNameController),
                         textInput(
                           L10n.of(context)!.password,
@@ -88,7 +94,9 @@ class SignUpView extends StatelessWidget {
                                   .read<SignUpViewModel>()
                                   .add(SignUpInitialEvent(context));
                             },
-                            child: Text(L10n.of(context)!.signup,),
+                            child: Text(
+                              L10n.of(context)!.signup,
+                            ),
                           ),
                         ),
                       ],
