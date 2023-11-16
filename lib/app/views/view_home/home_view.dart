@@ -5,7 +5,7 @@ import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/widgets/glass_effect_button_widgets.dart';
 import 'package:edu4dev/core/widgets/home_button_widgets.dart';
 import 'package:flutter/material.dart';
-
+import 'package:glass_button_package/glass_button_package.dart';
 
 @RoutePage()
 class HomeView extends StatelessWidget {
@@ -20,22 +20,21 @@ class HomeView extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-           Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 30, bottom: 10),
+                padding: const EdgeInsets.only(top: 30, bottom: 10),
                 child: SizedBox(
                   height: 50,
                   child: Text(
-                              L10n.of(context)!.homepage,
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 255, 255, 255),
-                                fontFamily: 'Georgia',
-                                fontSize: 20,
-                                letterSpacing: 1
-                              ),
-                            ),
+                    L10n.of(context)!.homepage,
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontFamily: 'Georgia',
+                        fontSize: 20,
+                        letterSpacing: 1),
+                  ),
                 ),
               )
             ],
@@ -43,18 +42,17 @@ class HomeView extends StatelessWidget {
           Expanded(
               child: Container(
             height: double.infinity,
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
               // shape: BoxShape.circle,
               gradient: LinearGradient(
-                begin: Alignment.bottomRight
-                .add(Alignment.bottomLeft),
-                end: Alignment.topLeft,
-                colors: const [
-                AppLightColorConstants.dividerAccent,
-                AppLightColorConstants.onBoardingColor,
-                AppLightColorConstants.borderAccent
-              ]),
-              borderRadius: BorderRadius.only(
+                  begin: Alignment.bottomRight.add(Alignment.bottomLeft),
+                  end: Alignment.topLeft,
+                  colors: const [
+                    AppLightColorConstants.dividerAccent,
+                    AppLightColorConstants.onBoardingColor,
+                    AppLightColorConstants.borderAccent
+                  ]),
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(50),
                 topRight: Radius.circular(50),
               ),
@@ -67,13 +65,78 @@ class HomeView extends StatelessWidget {
                     crossAxisSpacing: 20),
                 children: [
                   //1. box
-                  GlassEffectButton(text: L10n.of(context)!.frontEndDev,),
-                  GlassEffectButton(text: L10n.of(context)!.backEndDev),
-                  GlassEffectButton(text: L10n.of(context)!.fullStackDev),
-                  GlassEffectButton(text: L10n.of(context)!.mobileDev),
-                  GlassEffectButton(text: L10n.of(context)!.softwareDev),
-                  GlassEffectButton(text: L10n.of(context)!.devopsDev),
-                  
+                  GlassEffectButton(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25),
+                      child: Text(
+                        L10n.of(context)!.frontEndDev,
+                        style: const TextStyle(
+                            color: AppLightColorConstants.bgLight,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    ),
+                  ),
+                  GlassEffectButton(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25),
+                      child: Text(
+                        L10n.of(context)!.backEndDev,
+                        style: const TextStyle(
+                            color: AppLightColorConstants.bgInverse,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    ),
+                  ),
+                  GlassEffectButton(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25),
+                      child: Text(
+                        L10n.of(context)!.fullStackDev,
+                        style: const TextStyle(
+                            color: AppLightColorConstants.bgLight,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    ),
+                  ),
+                  GlassEffectButton(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25),
+                      child: Text(
+                        L10n.of(context)!.mobileDev,
+                        style: const TextStyle(
+                            color: AppLightColorConstants.bgLight,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    ),
+                  ),
+                  GlassEffectButton(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25),
+                      child: Text(
+                        L10n.of(context)!.devopsDev,
+                        style: const TextStyle(
+                            color: AppLightColorConstants.bgLight,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    ),
+                  ),
+                  GlassEffectButton(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25),
+                      child: Text(
+                        L10n.of(context)!.softwareDev,
+                        style: const TextStyle(
+                            color: AppLightColorConstants.bgLight,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    ),
+                  ),
                 ]),
           ))
         ],
@@ -81,4 +144,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-
