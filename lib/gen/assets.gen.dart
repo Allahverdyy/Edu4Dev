@@ -9,10 +9,31 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  $AssetsIconsPngGen get png => const $AssetsIconsPngGen();
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   $AssetsImagesPngGen get png => const $AssetsImagesPngGen();
+}
+
+class $AssetsIconsPngGen {
+  const $AssetsIconsPngGen();
+
+  /// File path: assets/icons/png/icons_apple.png
+  AssetGenImage get iconsApple =>
+      const AssetGenImage('assets/icons/png/icons_apple.png');
+
+  /// File path: assets/icons/png/icons_google.png
+  AssetGenImage get iconsGoogle =>
+      const AssetGenImage('assets/icons/png/icons_google.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [iconsApple, iconsGoogle];
 }
 
 class $AssetsImagesPngGen {
@@ -76,6 +97,7 @@ class $AssetsImagesPngGen {
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
