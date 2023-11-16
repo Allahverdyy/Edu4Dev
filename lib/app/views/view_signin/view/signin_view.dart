@@ -7,7 +7,6 @@ import 'package:edu4dev/app/views/view_signup/view/signup_view.dart';
 import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:edu4dev/core/widgets/custom_button.dart';
-import 'package:edu4dev/core/widgets/glass_effect_button_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -44,9 +43,6 @@ class SignInView extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: AppLightColorConstants.greyteam1),
-                    ),
-                    SizedBox(
-                      height: context.constHighValue / 2,
                     ),
                     Row(
                       mainAxisAlignment: context.center,
@@ -86,6 +82,7 @@ class SignInView extends StatelessWidget {
                                 .read<SignInViewModel>()
                                 .add(SignInInitialEvent(context));
                           },
+                          text: L10n.of(context)!.signin,
                         ),
                       ],
                     )

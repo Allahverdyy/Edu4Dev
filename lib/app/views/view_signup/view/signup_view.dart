@@ -4,6 +4,7 @@ import 'package:edu4dev/app/views/view_signin/view/signin_view.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_event.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_state.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_view_model.dart';
+import 'package:edu4dev/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -85,20 +86,14 @@ class SignUpView extends StatelessWidget {
                           context,
                           context.read<SignUpViewModel>().adressController,
                         ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(vertical: 20),
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              context
-                                  .read<SignUpViewModel>()
-                                  .add(SignUpInitialEvent(context));
-                            },
-                            child: Text(
-                              L10n.of(context)!.signup,
-                            ),
-                          ),
-                        ),
+                        CustomButton(
+                          ontap: () {
+                            context
+                                .read<SignUpViewModel>()
+                                .add(SignUpInitialEvent(context));
+                          },
+                          text: L10n.of(context)!.signup,
+                        )
                       ],
                     ),
                   ),

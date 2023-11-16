@@ -24,7 +24,10 @@ class OnboardingView extends StatelessWidget {
           gradient: LinearGradient(
             begin: context.atopRight,
             end: context.abottomRight,
-            colors: [ AppLightColorConstants.onBoardingColor, AppLightColorConstants.onBoardingColorOne],
+            colors: [
+              AppLightColorConstants.onBoardingColor,
+              AppLightColorConstants.onBoardingColorOne
+            ],
           ),
         ),
         child: BlocProvider(
@@ -44,36 +47,33 @@ class OnboardingView extends StatelessWidget {
                     children: [
                       OnboardingWidget(
                         ontap: () {
-                          context.router.push(const SignUpViewRoute());
+                          context.router.push(const SignViewRoute());
                         },
                         context: context,
                         pageIndex: 0,
                         image: Assets.images.png.imagesSplashViewLogo.path,
                         title: L10n.of(context)!.boost,
-                        desc:
-                            L10n.of(context)!.onboardingonetittle,
+                        desc: L10n.of(context)!.onboardingonetittle,
                       ),
                       OnboardingWidget(
                         ontap: () {
-                          context.router.push(const SignInViewRoute());
+                          context.router.push(const SignViewRoute());
                         },
                         context: context,
                         pageIndex: 1,
                         image: Assets.images.png.imagesOnboardingbgtwo.path,
                         title: L10n.of(context)!.workSeamlessly,
-                        desc:
-                           L10n.of(context)!.seamlessly,
+                        desc: L10n.of(context)!.seamlessly,
                       ),
                       OnboardingWidget(
                         ontap: () {
-                          context.router.push(const SignUpViewRoute());
+                          context.router.push(const SignViewRoute());
                         },
                         context: context,
                         pageIndex: 2,
                         image: Assets.images.png.imagesSplashViewLogo.path,
                         title: L10n.of(context)!.achieveHigherGoals,
-                        desc:
-                            L10n.of(context)!.byboosting,
+                        desc: L10n.of(context)!.byboosting,
                       ),
                     ],
                   ),

@@ -14,46 +14,46 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SplashViewModel()..add(SplashInitialEvent(context)),
-      child: BlocBuilder<SplashViewModel, SplashState>(builder: (context, state) {
-        return Scaffold(
-          body: Container(
-        width: context.width,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-          begin: context.abottomLeft,
-          end: context.atopRight,
-          colors: <Color>[
-            Color.fromARGB(255, 239, 250, 255),
-            Color.fromARGB(255, 203, 245, 255),
-            Color.fromARGB(255, 138, 179, 255)
-          ],
-        )),
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: context.height / 3,
-              ),
-              Image.asset(Assets.images.png.imagesSplashViewLogo.path),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                L10n.of(context)!.splashEdu4Tech,
-                style: const TextStyle(
-                  fontSize: 25,
-                  fontFamily: 'Georgia',
+        create: (context) =>
+            SplashViewModel()..add(SplashInitialEvent(context)),
+        child: BlocBuilder<SplashViewModel, SplashState>(
+          builder: (context, state) {
+            return Scaffold(
+                body: Container(
+              width: context.width,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                begin: context.abottomLeft,
+                end: context.atopRight,
+                colors: const <Color>[
+                  Color.fromARGB(255, 239, 250, 255),
+                  Color.fromARGB(255, 203, 245, 255),
+                  Color.fromARGB(255, 138, 179, 255)
+                ],
+              )),
+              child: Center(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: context.height / 3,
+                    ),
+                    Image.asset(Assets.images.png.imagesSplashViewLogo.path),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      L10n.of(context)!.splashEdu4Tech,
+                      style: const TextStyle(
+                        fontSize: 25,
+                        fontFamily: 'Georgia',
+                      ),
+                      textAlign: context.textcenter,
+                    )
+                  ],
                 ),
-                textAlign: context.textcenter,
-              )
-            ],
-          ),
-        ),
-      ));
-      },)
-      
-      
-    );
+              ),
+            ));
+          },
+        ));
   }
 }

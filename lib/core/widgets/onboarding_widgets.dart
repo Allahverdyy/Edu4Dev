@@ -8,14 +8,13 @@ import 'package:flutter/material.dart';
 
 final PageController controller = PageController(initialPage: 0);
 // ignore: non_constant_identifier_names
-Widget OnboardingWidget({
-  required pageIndex,
-  required String image,
-  required title,
-  required desc,
-  required BuildContext context,
-  required void Function()? ontap
-}) {
+Widget OnboardingWidget(
+    {required pageIndex,
+    required String image,
+    required title,
+    required desc,
+    required BuildContext context,
+    required void Function()? ontap}) {
   return Column(
     mainAxisAlignment: context.center,
     children: [
@@ -64,7 +63,7 @@ Widget OnboardingWidget({
             GestureDetector(
               onTap: () {
                 pageIndex == 2
-                    ? context.router.push(SignUpViewRoute())
+                    ? context.router.push(const SignViewRoute())
                     : controller.animateToPage(pageIndex + 1,
                         duration: context.durationLow,
                         curve: Curves.decelerate);

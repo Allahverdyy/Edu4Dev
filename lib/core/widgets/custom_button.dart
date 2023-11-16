@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final void Function()? ontap;
+  final String text;
   const CustomButton({
     super.key,
     required this.ontap,
+    required this.text,
   });
 
   @override
@@ -20,7 +22,7 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8)),
         child: Center(
           child: Text(
-            L10n.of(context)!.signin,
+            text,
             style: const TextStyle(
                 color: AppLightColorConstants.divider,
                 fontWeight: FontWeight.bold,
