@@ -7,6 +7,8 @@ import 'package:edu4dev/app/views/view_signup/view/signup_view.dart';
 import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:edu4dev/core/widgets/custom_button.dart';
+import 'package:edu4dev/core/widgets/square_tile.dart';
+import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,9 +29,6 @@ class SignInView extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: context.constHighValue,
-                    ),
                     const Icon(
                       Icons.lock_outline_sharp,
                       size: 100,
@@ -38,7 +37,7 @@ class SignInView extends StatelessWidget {
                       height: context.constHighValue,
                     ),
                     Text(
-                      L10n.of(context)!.welcome,
+                      L10n.of(context)!.welcomeback,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -75,7 +74,25 @@ class SignInView extends StatelessWidget {
                             context,
                             const Icon(Icons.key),
                             context.read<SignInViewModel>().passwordController),
-                        const SizedBox(height: 25),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
+                          child: Row(
+                            mainAxisAlignment: context.end,
+                            children: [
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    L10n.of(context)!.forgotPassword,
+                                    style: TextStyle(
+                                        color:
+                                            AppLightColorConstants.greyteam1),
+                                  ))
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: context.constLowValue,
+                        ),
                         CustomButton(
                           ontap: () {
                             context
@@ -83,6 +100,52 @@ class SignInView extends StatelessWidget {
                                 .add(SignInInitialEvent(context));
                           },
                           text: L10n.of(context)!.signin,
+                        ),
+                        SizedBox(
+                          height: context.constMediumValue,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Divider(
+                                  thickness: 1,
+                                  color: AppLightColorConstants.greyteam1,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Text(L10n.of(context)!.orContinue),
+                              ),
+                              Expanded(
+                                child: Divider(
+                                  thickness: 1,
+                                  color: AppLightColorConstants.greyteam1,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: context.constMediumValue,
+                        ),
+                        Row(
+                          mainAxisAlignment: context.center,
+                          children: [
+                            SquareTile(
+                              imagePath: Assets.icons.png.iconsApple.path,
+                              height: context.constHighValue,
+                            ),
+                            SizedBox(
+                              width: context.constMediumValue,
+                            ),
+                            SquareTile(
+                              imagePath: Assets.icons.png.iconsGoogle.path,
+                              height: context.constHighValue,
+                            )
+                          ],
                         ),
                       ],
                     )

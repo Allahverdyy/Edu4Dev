@@ -4,6 +4,8 @@ import 'package:edu4dev/app/views/view_signin/view/signin_view.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_event.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_state.dart';
 import 'package:edu4dev/app/views/view_signup/viewmodel/signup_view_model.dart';
+import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
+import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:edu4dev/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,6 +22,7 @@ class SignUpView extends StatelessWidget {
         child: BlocBuilder<SignUpViewModel, SignUpState>(
             builder: (context, state) {
           return Scaffold(
+            backgroundColor: AppLightColorConstants.greyteam2,
             resizeToAvoidBottomInset: false,
             body: SafeArea(
               child: SingleChildScrollView(
@@ -29,18 +32,19 @@ class SignUpView extends StatelessWidget {
                   child: Center(
                     child: Column(
                       children: [
+                        Text(L10n.of(context)!.signup,
+                            style: TextStyle(
+                                fontSize: 30, fontWeight: FontWeight.bold, 
+                                color: AppLightColorConstants.greyteam1)),
                         Row(
-                          children: [
-                            Text(L10n.of(context)!.signup,
-                                style: TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        Row(
+                          mainAxisAlignment: context.center,
                           children: [
                             Text(
                               L10n.of(context)!.already,
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppLightColorConstants.greyteam1),
                             ),
                             TextButton(
                               onPressed: () {
@@ -86,6 +90,7 @@ class SignUpView extends StatelessWidget {
                           context,
                           context.read<SignUpViewModel>().adressController,
                         ),
+                        SizedBox( height: context.constLowValue,),
                         CustomButton(
                           ontap: () {
                             context
