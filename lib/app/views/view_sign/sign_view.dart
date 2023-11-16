@@ -16,7 +16,7 @@ class SignView extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(Assets.images.png.imagesHomeViewB.path))),
+              image: AssetImage(Assets.images.png.imagesHomeViewBgim.path))),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Column(

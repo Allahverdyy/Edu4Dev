@@ -51,6 +51,14 @@ class $AssetsImagesPngGen {
   AssetGenImage get imagesHomeViewBg23 =>
       const AssetGenImage('assets/images/png/images_home_view_bg23.png');
 
+  /// File path: assets/images/png/images_home_view_bgi.png
+  AssetGenImage get imagesHomeViewBgi =>
+      const AssetGenImage('assets/images/png/images_home_view_bgi.png');
+
+  /// File path: assets/images/png/images_home_view_bgim.png
+  AssetGenImage get imagesHomeViewBgim =>
+      const AssetGenImage('assets/images/png/images_home_view_bgim.png');
+
   /// File path: assets/images/png/images_onboardingbgtwo.png
   AssetGenImage get imagesOnboardingbgtwo =>
       const AssetGenImage('assets/images/png/images_onboardingbgtwo.png');
@@ -68,6 +76,8 @@ class $AssetsImagesPngGen {
         imagesHomeViewBg,
         imagesHomeViewBg1,
         imagesHomeViewBg23,
+        imagesHomeViewBgi,
+        imagesHomeViewBgim,
         imagesOnboardingbgtwo,
         imagesSplashViewLogo,
         imagesWelcomeViewLogo
