@@ -1,6 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
-import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
