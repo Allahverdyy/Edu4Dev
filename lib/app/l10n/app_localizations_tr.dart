@@ -68,7 +68,7 @@ class L10nTr extends L10n {
   String get fav => 'Favoriler';
 
   @override
-  String get welcome => 'Hoşgeldin';
+  String get welcome => 'Tekrar hoş geldin, gözlerimiz seni aradı';
 
   @override
   String get haveAccount => 'Hesabınız yok mu ?';
@@ -77,7 +77,7 @@ class L10nTr extends L10n {
   String get signup => 'Kayıt Ol';
 
   @override
-  String get login => 'Giriş Yap';
+  String get signin => 'Giriş Yap';
 
   @override
   String get email => 'E-mail';

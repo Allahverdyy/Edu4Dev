@@ -222,7 +222,7 @@ abstract class L10n {
   /// No description provided for @welcome.
   ///
   /// In en, this message translates to:
-  /// **'Welcome'**
+  /// **'Welcome back you\'ve been missed'**
   String get welcome;
 
   /// No description provided for @haveAccount.
@@ -237,11 +237,11 @@ abstract class L10n {
   /// **'Sign Up'**
   String get signup;
 
-  /// No description provided for @login.
+  /// No description provided for @signin.
   ///
   /// In en, this message translates to:
-  /// **'Login'**
-  String get login;
+  /// **'Sign In'**
+  String get signin;
 
   /// No description provided for @email.
   ///

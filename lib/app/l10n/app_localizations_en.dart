@@ -68,7 +68,7 @@ class L10nEn extends L10n {
   String get fav => 'Favorite';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Welcome back you\'ve been missed';
 
   @override
   String get haveAccount => 'Don\'t you have an account?';
@@ -77,7 +77,7 @@ class L10nEn extends L10n {
   String get signup => 'Sign Up';
 
   @override
-  String get login => 'Login';
+  String get signin => 'Sign In';
 
   @override
   String get email => 'E-mail';
