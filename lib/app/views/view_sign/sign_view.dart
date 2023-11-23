@@ -45,7 +45,7 @@ class SignView extends StatelessWidget {
             ),
             GlassEffectButton(
               ontap: () {
-                context.router.push(const SignUpViewRoute());
+                context.router.push(const SignInViewRoute());
               },
               width: context.width * 2 / 3,
               height: context.height / 17,
