@@ -13,6 +13,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: SignInViewRoute.page),
         AutoRoute(page: SignUpViewRoute.page),
         AutoRoute( page: WelcomeViewRoute.page),
+        AutoRoute(page: SettingsViewRoute.page),
         AutoRoute( page: NavBarViewRoute.page, 
         children: [
           AutoRoute(page: HomeViewRoute.page),

@@ -5,7 +5,7 @@ import 'package:edu4dev/app/views/view_profile/view_model/profile_state.dart';
 import 'package:edu4dev/app/views/view_profile/view_model/profile_view_model.dart';
 import 'package:edu4dev/core/extentions/context_extension.dart';
 import 'package:edu4dev/core/widgets/custom_app_bar_widgets.dart';
-import 'package:edu4dev/core/widgets/profile_list_widgets.dart';
+import 'package:edu4dev/core/widgets/custom_list_tile.dart';
 import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class ProfileView extends StatelessWidget {
                         color: context.isDark ? Colors.white : Colors.black,
                       ),
               onPressed: () {
-                context.router.replace(HomeViewRoute());
+                context.router.replace(const HomeViewRoute());
               },
             ),
             body: Center(
@@ -86,7 +86,7 @@ class ProfileView extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ProfileListWidgets(
+                        CustomListTile(
                             leading: const Icon(Icons.dark_mode_outlined),
                             title: L10n.of(context)!.darkMode,
                             trailing: CupertinoSwitch(
@@ -101,7 +101,7 @@ class ProfileView extends StatelessWidget {
                         const Divider(
                           thickness: 1,
                         ),
-                        ProfileListWidgets(
+                        CustomListTile(
                           ontap: () {},
                           leading: const Icon(Icons.abc),
                           title: L10n.of(context)!.myCv,
@@ -110,8 +110,9 @@ class ProfileView extends StatelessWidget {
                         const Divider(
                           thickness: 1,
                         ),
-                        ProfileListWidgets(
+                        CustomListTile(
                           ontap: () {
+                            context.router.push(const SettingsViewRoute());
                           },
                           leading: const Icon(Icons.settings),
                           title: L10n.of(context)!.settings,
@@ -120,7 +121,7 @@ class ProfileView extends StatelessWidget {
                         const Divider(
                           thickness: 1,
                         ),
-                        ProfileListWidgets(
+                        CustomListTile(
                           ontap: () {
                             context.router.replace(const SignInViewRoute());
                           },
