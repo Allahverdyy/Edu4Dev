@@ -392,6 +392,60 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.'**
   String get edu4TechWelcomeSign;
+
+  /// No description provided for @changePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Password'**
+  String get changePassword;
+
+  /// No description provided for @currentPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Password'**
+  String get currentPassword;
+
+  /// No description provided for @newPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'New Password'**
+  String get newPassword;
+
+  /// No description provided for @confirmPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Password'**
+  String get confirmPassword;
+
+  /// No description provided for @saveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Changes'**
+  String get saveChanges;
+
+  /// No description provided for @passwordUpdatedSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Password Updated Successfully'**
+  String get passwordUpdatedSuccessfully;
+
+  /// No description provided for @notification.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification Settings'**
+  String get notification;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language Settings'**
+  String get language;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

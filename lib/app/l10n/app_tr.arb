@@ -48,5 +48,14 @@
   "forgotPassword":"Parolami Unuttum?",
   "orContinue":"Yada şununla devam et",
   "edu4TechDevPlatform":"Edu4Tech \nGeliştirici Platformu",
-  "edu4TechWelcomeSign":"Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv'ni yükle."
+  "edu4TechWelcomeSign":"Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv'ni yükle.",
+  "changePassword": "Parola Değiştir",
+  "currentPassword": "Mevcut Parola",
+  "newPassword": "Yeni Parola",
+  "confirmPassword": "Parolanı Onayla",
+  "saveChanges": "Değişiklikleri Kaydet",
+  "passwordUpdatedSuccessfully": "Parola Başarıyla güncellendi",
+  "notification": "Bildirim Ayalarları",
+  "language":"Dil Ayarları",
+  "privacyPolicy": "Gizlilik Politikası"
 }

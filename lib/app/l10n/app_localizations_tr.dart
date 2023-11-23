@@ -153,4 +153,31 @@ class L10nTr extends L10n {
 
   @override
   String get edu4TechWelcomeSign => 'Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv\'ni yükle.';
+
+  @override
+  String get changePassword => 'Parola Değiştir';
+
+  @override
+  String get currentPassword => 'Mevcut Parola';
+
+  @override
+  String get newPassword => 'Yeni Parola';
+
+  @override
+  String get confirmPassword => 'Parolanı Onayla';
+
+  @override
+  String get saveChanges => 'Değişiklikleri Kaydet';
+
+  @override
+  String get passwordUpdatedSuccessfully => 'Parola Başarıyla güncellendi';
+
+  @override
+  String get notification => 'Bildirim Ayalarları';
+
+  @override
+  String get language => 'Dil Ayarları';
+
+  @override
+  String get privacyPolicy => 'Gizlilik Politikası';
 }

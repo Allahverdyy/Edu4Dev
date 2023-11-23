@@ -48,5 +48,14 @@
   "forgotPassword":"Forgot Password?",
   "orContinue":"Or continue with",
   "edu4TechDevPlatform":"Edu4Tech \nDeveloper Platform",
-  "edu4TechWelcomeSign":"Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv."
+  "edu4TechWelcomeSign":"Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.",
+  "changePassword": "Change Password",
+  "currentPassword": "Current Password",
+  "newPassword": "New Password",
+  "confirmPassword": "Confirm Password",
+  "saveChanges": "Save Changes",
+  "passwordUpdatedSuccessfully": "Password Updated Successfully",
+  "notification": "Notification Settings",
+  "language":"Language Settings",
+  "privacyPolicy": "Privacy Policy"
 }

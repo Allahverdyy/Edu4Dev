@@ -153,4 +153,31 @@ class L10nEn extends L10n {
 
   @override
   String get edu4TechWelcomeSign => 'Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.';
+
+  @override
+  String get changePassword => 'Change Password';
+
+  @override
+  String get currentPassword => 'Current Password';
+
+  @override
+  String get newPassword => 'New Password';
+
+  @override
+  String get confirmPassword => 'Confirm Password';
+
+  @override
+  String get saveChanges => 'Save Changes';
+
+  @override
+  String get passwordUpdatedSuccessfully => 'Password Updated Successfully';
+
+  @override
+  String get notification => 'Notification Settings';
+
+  @override
+  String get language => 'Language Settings';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
 }
