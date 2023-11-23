@@ -1,17 +1,19 @@
 
 import 'package:flutter/material.dart';
 
-class ProfileListWidgets extends StatelessWidget {
+class CustomListTile extends StatelessWidget {
   final Widget? leading;
   final Widget? trailing;
   final String title;
   final void Function()? ontap;
-  const ProfileListWidgets({
+  final Color? iconColor;
+  const CustomListTile({
     super.key,
     this.leading,
     this.trailing,
     this.title = ' ',
     this.ontap,
+    this.iconColor
   });
 
   @override
