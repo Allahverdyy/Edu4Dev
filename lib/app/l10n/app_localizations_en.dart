@@ -149,7 +149,7 @@ class L10nEn extends L10n {
   String get orContinue => 'Or continue with';
 
   @override
-  String get edu4TechDevPlatform => 'Edu4Tech \nDeveloper Platform';
+  String get edu4TechDevPlatform => 'Welcome to the \nEdu4Tech Mobile App!';
 
   @override
   String get edu4TechWelcomeSign => 'Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.';
@@ -180,4 +180,31 @@ class L10nEn extends L10n {
 
   @override
   String get privacyPolicy => 'Privacy Policy';
+
+  @override
+  String get signUpEduDreams => 'Sign up now and make the education of your dreams';
+
+  @override
+  String get onBoardingOne => 'Are you ready to enjoy your life full of Edu4Tech training?';
+
+  @override
+  String get onBoardingTwo => 'Are you ready to change your life with the education you received at Edu4Tech?';
+
+  @override
+  String get onBoardingThree => 'Complete your education with Edu4Tech, get your certificate, secure your job!';
+
+  @override
+  String get onBoardingTitle => 'Welcome to Edu4Tech!';
+
+  @override
+  String get onBoardingTitleOne => 'Edu4Tech Training Time!';
+
+  @override
+  String get onBoardingTitleTwo => 'Employment with Edu4Tech!';
+
+  @override
+  String get succesSignIn => 'Login is successful, you are directed to the home page...';
+
+  @override
+  String get succesSignUp => 'Registration successful, you are directed to the login page...';
 }

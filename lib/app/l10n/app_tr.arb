@@ -47,7 +47,7 @@
   "welcome":"Hoşgeldin",
   "forgotPassword":"Parolami Unuttum?",
   "orContinue":"Yada şununla devam et",
-  "edu4TechDevPlatform":"Edu4Tech \nGeliştirici Platformu",
+  "edu4TechDevPlatform":"Hoşgeldiniz, Edu4Tech Mobil Uygulamasına! ",
   "edu4TechWelcomeSign":"Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv'ni yükle.",
   "changePassword": "Parola Değiştir",
   "currentPassword": "Mevcut Parola",
@@ -57,5 +57,14 @@
   "passwordUpdatedSuccessfully": "Parola Başarıyla güncellendi",
   "notification": "Bildirim Ayalarları",
   "language":"Dil Ayarları",
-  "privacyPolicy": "Gizlilik Politikası"
+  "privacyPolicy": "Gizlilik Politikası",
+  "signUpEduDreams":"Şimdi kaydolun ve hayallerinizdeki eğitimi gerçekleştirin",
+  "onBoardingOne":"Edu4Tech eğitimleriyle dolu hayatınızın tadını çıkarmaya hazır mısn ?",
+  "onBoardingTwo":"Edu4Tech de aldığın eğitimle hayatını değiştirme hazır mısın ?",
+  "onBoardingThree":"Edu4Tech ile eğitimini tamamla, sertifikanı al, işini garantile!",
+  "onBoardingTitle":"Edu4Tech'e hosgeldiniz!",
+  "onBoardingTitleOne":"Edu4Tech Eğitim Zamanı!",
+  "onBoardingTitleTwo":"Edu4Tech ile İstihdam!",
+  "succesSignIn":"Giriş başarılı, ana sayfaya yönlendiriliyorsunuz...",
+  "succesSignUp":"Kayıt başarılı, giriş sayfasına yönlendiriliyorsunuz..."
 }

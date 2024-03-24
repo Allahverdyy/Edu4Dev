@@ -47,7 +47,7 @@
   "welcome":"Welcome",
   "forgotPassword":"Forgot Password?",
   "orContinue":"Or continue with",
-  "edu4TechDevPlatform":"Edu4Tech \nDeveloper Platform",
+  "edu4TechDevPlatform":"Welcome to the \nEdu4Tech Mobile App!",
   "edu4TechWelcomeSign":"Welcome the Edu4Tech Developer Platform. \nThis Platform entry and upload cv.",
   "changePassword": "Change Password",
   "currentPassword": "Current Password",
@@ -57,5 +57,14 @@
   "passwordUpdatedSuccessfully": "Password Updated Successfully",
   "notification": "Notification Settings",
   "language":"Language Settings",
-  "privacyPolicy": "Privacy Policy"
+  "privacyPolicy": "Privacy Policy",
+  "signUpEduDreams":"Sign up now and make the education of your dreams",
+  "onBoardingOne":"Are you ready to enjoy your life full of Edu4Tech training?",
+  "onBoardingTwo":"Are you ready to change your life with the education you received at Edu4Tech?",
+  "onBoardingThree":"Complete your education with Edu4Tech, get your certificate, secure your job!",
+  "onBoardingTitle":"Welcome to Edu4Tech!",
+  "onBoardingTitleOne":"Edu4Tech Training Time!",
+  "onBoardingTitleTwo":"Employment with Edu4Tech!",
+  "succesSignIn":"Login is successful, you are directed to the home page...",
+  "succesSignUp":"Registration successful, you are directed to the login page..."
 }

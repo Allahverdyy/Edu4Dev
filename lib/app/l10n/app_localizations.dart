@@ -384,7 +384,7 @@ abstract class L10n {
   /// No description provided for @edu4TechDevPlatform.
   ///
   /// In en, this message translates to:
-  /// **'Edu4Tech \nDeveloper Platform'**
+  /// **'Welcome to the \nEdu4Tech Mobile App!'**
   String get edu4TechDevPlatform;
 
   /// No description provided for @edu4TechWelcomeSign.
@@ -446,6 +446,60 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Privacy Policy'**
   String get privacyPolicy;
+
+  /// No description provided for @signUpEduDreams.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up now and make the education of your dreams'**
+  String get signUpEduDreams;
+
+  /// No description provided for @onBoardingOne.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you ready to enjoy your life full of Edu4Tech training?'**
+  String get onBoardingOne;
+
+  /// No description provided for @onBoardingTwo.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you ready to change your life with the education you received at Edu4Tech?'**
+  String get onBoardingTwo;
+
+  /// No description provided for @onBoardingThree.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your education with Edu4Tech, get your certificate, secure your job!'**
+  String get onBoardingThree;
+
+  /// No description provided for @onBoardingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to Edu4Tech!'**
+  String get onBoardingTitle;
+
+  /// No description provided for @onBoardingTitleOne.
+  ///
+  /// In en, this message translates to:
+  /// **'Edu4Tech Training Time!'**
+  String get onBoardingTitleOne;
+
+  /// No description provided for @onBoardingTitleTwo.
+  ///
+  /// In en, this message translates to:
+  /// **'Employment with Edu4Tech!'**
+  String get onBoardingTitleTwo;
+
+  /// No description provided for @succesSignIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Login is successful, you are directed to the home page...'**
+  String get succesSignIn;
+
+  /// No description provided for @succesSignUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Registration successful, you are directed to the login page...'**
+  String get succesSignUp;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

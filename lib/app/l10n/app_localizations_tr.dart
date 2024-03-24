@@ -149,7 +149,7 @@ class L10nTr extends L10n {
   String get orContinue => 'Yada şununla devam et';
 
   @override
-  String get edu4TechDevPlatform => 'Edu4Tech \nGeliştirici Platformu';
+  String get edu4TechDevPlatform => 'Hoşgeldiniz, Edu4Tech Mobil Uygulamasına! ';
 
   @override
   String get edu4TechWelcomeSign => 'Edu4Tech geliştirici platformuna hoşgeldiniz. \nPlatforma giriş yap cv\'ni yükle.';
@@ -180,4 +180,31 @@ class L10nTr extends L10n {
 
   @override
   String get privacyPolicy => 'Gizlilik Politikası';
+
+  @override
+  String get signUpEduDreams => 'Şimdi kaydolun ve hayallerinizdeki eğitimi gerçekleştirin';
+
+  @override
+  String get onBoardingOne => 'Edu4Tech eğitimleriyle dolu hayatınızın tadını çıkarmaya hazır mısn ?';
+
+  @override
+  String get onBoardingTwo => 'Edu4Tech de aldığın eğitimle hayatını değiştirme hazır mısın ?';
+
+  @override
+  String get onBoardingThree => 'Edu4Tech ile eğitimini tamamla, sertifikanı al, işini garantile!';
+
+  @override
+  String get onBoardingTitle => 'Edu4Tech\'e hosgeldiniz!';
+
+  @override
+  String get onBoardingTitleOne => 'Edu4Tech Eğitim Zamanı!';
+
+  @override
+  String get onBoardingTitleTwo => 'Edu4Tech ile İstihdam!';
+
+  @override
+  String get succesSignIn => 'Giriş başarılı, ana sayfaya yönlendiriliyorsunuz...';
+
+  @override
+  String get succesSignUp => 'Kayıt başarılı, giriş sayfasına yönlendiriliyorsunuz...';
 }
