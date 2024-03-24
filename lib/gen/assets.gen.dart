@@ -28,16 +28,33 @@ class $AssetsIconsPngGen {
   AssetGenImage get iconsApple =>
       const AssetGenImage('assets/icons/png/icons_apple.png');
 
+  /// File path: assets/icons/png/icons_bottom_right.png
+  AssetGenImage get iconsBottomRight =>
+      const AssetGenImage('assets/icons/png/icons_bottom_right.png');
+
   /// File path: assets/icons/png/icons_google.png
   AssetGenImage get iconsGoogle =>
       const AssetGenImage('assets/icons/png/icons_google.png');
 
+  /// File path: assets/icons/png/icons_top_left.png
+  AssetGenImage get iconsTopLeft =>
+      const AssetGenImage('assets/icons/png/icons_top_left.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [iconsApple, iconsGoogle];
+  List<AssetGenImage> get values =>
+      [iconsApple, iconsBottomRight, iconsGoogle, iconsTopLeft];
 }
 
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
+
+  /// File path: assets/images/png/images_edu4tech_logo.png
+  AssetGenImage get imagesEdu4techLogo =>
+      const AssetGenImage('assets/images/png/images_edu4tech_logo.png');
+
+  /// File path: assets/images/png/images_edu4tech_logo_alternative.png
+  AssetGenImage get imagesEdu4techLogoAlternative => const AssetGenImage(
+      'assets/images/png/images_edu4tech_logo_alternative.png');
 
   /// File path: assets/images/png/images_home_view_bg.png
   AssetGenImage get imagesHomeViewBg =>
@@ -59,13 +76,25 @@ class $AssetsImagesPngGen {
   AssetGenImage get imagesHomeViewBgim =>
       const AssetGenImage('assets/images/png/images_home_view_bgim.png');
 
+  /// File path: assets/images/png/images_on_boarding_one.png
+  AssetGenImage get imagesOnBoardingOne =>
+      const AssetGenImage('assets/images/png/images_on_boarding_one.png');
+
+  /// File path: assets/images/png/images_on_boarding_three.png
+  AssetGenImage get imagesOnBoardingThree =>
+      const AssetGenImage('assets/images/png/images_on_boarding_three.png');
+
+  /// File path: assets/images/png/images_on_boarding_two.png
+  AssetGenImage get imagesOnBoardingTwo =>
+      const AssetGenImage('assets/images/png/images_on_boarding_two.png');
+
   /// File path: assets/images/png/images_onboardingbgtwo.png
   AssetGenImage get imagesOnboardingbgtwo =>
       const AssetGenImage('assets/images/png/images_onboardingbgtwo.png');
 
-  /// File path: assets/images/png/images_splash_view_logo.png
-  AssetGenImage get imagesSplashViewLogo =>
-      const AssetGenImage('assets/images/png/images_splash_view_logo.png');
+  /// File path: assets/images/png/images_sign_bg.png
+  AssetGenImage get imagesSignBg =>
+      const AssetGenImage('assets/images/png/images_sign_bg.png');
 
   /// File path: assets/images/png/images_welcome_view_logo.png
   AssetGenImage get imagesWelcomeViewLogo =>
@@ -73,13 +102,18 @@ class $AssetsImagesPngGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        imagesEdu4techLogo,
+        imagesEdu4techLogoAlternative,
         imagesHomeViewBg,
         imagesHomeViewBg1,
         imagesHomeViewBg23,
         imagesHomeViewBgi,
         imagesHomeViewBgim,
+        imagesOnBoardingOne,
+        imagesOnBoardingThree,
+        imagesOnBoardingTwo,
         imagesOnboardingbgtwo,
-        imagesSplashViewLogo,
+        imagesSignBg,
         imagesWelcomeViewLogo
       ];
 }
