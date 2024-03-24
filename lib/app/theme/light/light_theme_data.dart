@@ -6,11 +6,11 @@ final class AppThemeLight {
   static ThemeData getTheme() => ThemeData.light().copyWith(
         brightness: Brightness.light,
         scaffoldBackgroundColor: AppLightColorConstants.bgLight,
-        primaryColor: AppLightColorConstants.primaryColor,
+        primaryColor: AppLightColorConstants.bgPrimaryColor,
         primaryColorDark: AppLightColorConstants.bgLight,
         primaryColorLight: AppLightColorConstants.bgInverse,
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          secondary: AppLightColorConstants.secondaryColor,
+          secondary: AppLightColorConstants.buttonPrimaryColor,
           error: AppLightColorConstants.errorColor,
           background: AppLightColorConstants.bgLight,
         ),
@@ -28,7 +28,7 @@ final class AppThemeLight {
   static FloatingActionButtonThemeData fabTheme() {
     return FloatingActionButtonThemeData(
       elevation: 0,
-      backgroundColor: AppLightColorConstants.primaryColor,
+      backgroundColor: AppLightColorConstants.bgPrimaryColor,
       foregroundColor: AppLightColorConstants.bgLight,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(50),
@@ -53,7 +53,7 @@ final class AppThemeLight {
   static OutlinedButtonThemeData outlinedButtonTheme() {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        foregroundColor: AppLightColorConstants.primaryColor,
+        foregroundColor: AppLightColorConstants.bgPrimaryColor,
         backgroundColor: Colors.white,
         textStyle: const TextStyle(
           fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ final class AppThemeLight {
         ),
         side: const BorderSide(
           width: 2,
-          color: AppLightColorConstants.primaryColor,
+          color: AppLightColorConstants.bgPrimaryColor,
         ),
       ),
     );
@@ -72,8 +72,8 @@ final class AppThemeLight {
 
   static InputDecorationTheme inputDecorationTheme() {
     return InputDecorationTheme(
-      prefixIconColor: AppLightColorConstants.textFormFieldIconColor,
-      suffixIconColor: AppLightColorConstants.textFormFieldIconColor,
+      prefixIconColor: AppLightColorConstants.greyteam1,
+      suffixIconColor: AppLightColorConstants.greyteam1,
       hintStyle: const TextStyle(
         color: AppLightColorConstants.border,
       ),
@@ -102,7 +102,7 @@ final class AppThemeLight {
         borderRadius: BorderRadius.circular(10),
         borderSide: const BorderSide(
           width: 1,
-          color: AppLightColorConstants.primaryColor,
+          color: AppLightColorConstants.bgPrimaryColor,
         ),
       ),
       errorBorder: OutlineInputBorder(
@@ -122,7 +122,7 @@ final class AppThemeLight {
 
   static IconThemeData iconTheme() {
     return const IconThemeData(
-      color: AppLightColorConstants.primaryIconColor,
+      color: AppLightColorConstants.bgPrimaryColor,
       size: 24,
     );
   }
@@ -131,7 +131,7 @@ final class AppThemeLight {
     return const IconButtonThemeData(
       style: ButtonStyle(
         iconColor: MaterialStatePropertyAll(
-          AppLightColorConstants.primaryIconColor,
+          AppLightColorConstants.bgPrimaryColor,
         ),
       ),
     );

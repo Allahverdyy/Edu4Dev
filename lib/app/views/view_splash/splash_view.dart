@@ -37,7 +37,7 @@ class SplashView extends StatelessWidget {
                     SizedBox(
                       height: context.height / 3,
                     ),
-                    Image.asset(Assets.images.png.imagesSplashViewLogo.path),
+                    Image.asset(Assets.images.png.imagesEdu4techLogo.path),
                     const SizedBox(
                       height: 10,
                     ),

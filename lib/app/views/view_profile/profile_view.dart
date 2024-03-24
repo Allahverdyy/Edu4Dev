@@ -63,7 +63,7 @@ class ProfileView extends StatelessWidget {
                         CircleAvatar(
                           radius: 60,
                           backgroundImage: AssetImage(
-                            Assets.images.png.imagesSplashViewLogo.path,
+                            Assets.images.png.imagesEdu4techLogo.path,
                           ),
                           child: InkWell(
                             onDoubleTap: () {},

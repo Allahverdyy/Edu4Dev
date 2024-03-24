@@ -64,10 +64,13 @@ class SettingsView extends StatelessWidget {
                         },
                         leading: const Icon(
                           Icons.person_2_outlined,
-                          color: AppLightColorConstants.bgAccent,
+                          color: AppLightColorConstants.bgInverse,
                         ),
                         title: L10n.of(context)!.myProfile,
-                        trailing:  Icon(Icons.arrow_forward_ios_sharp,  color: AppLightColorConstants.greyteam1,),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios_sharp,
+                          color: AppLightColorConstants.greyteam1,
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
@@ -81,7 +84,10 @@ class SettingsView extends StatelessWidget {
                           color: AppLightColorConstants.successColor,
                         ),
                         title: L10n.of(context)!.language,
-                        trailing:  Icon(Icons.arrow_forward_ios_sharp,  color: AppLightColorConstants.greyteam1,),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios_sharp,
+                          color: AppLightColorConstants.greyteam1,
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
@@ -95,7 +101,10 @@ class SettingsView extends StatelessWidget {
                           color: AppLightColorConstants.greyteam1,
                         ),
                         title: L10n.of(context)!.changePassword,
-                        trailing: Icon(Icons.arrow_forward_ios_sharp, color: AppLightColorConstants.greyteam1,),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios_sharp,
+                          color: AppLightColorConstants.greyteam1,
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
@@ -104,9 +113,15 @@ class SettingsView extends StatelessWidget {
                         ontap: () {
                           context.router.replace(const SignInViewRoute());
                         },
-                        leading: const Icon(Icons.privacy_tip_outlined, color: AppLightColorConstants.bgAccent,),
+                        leading: const Icon(
+                          Icons.privacy_tip_outlined,
+                          color: AppLightColorConstants.bgInverse,
+                        ),
                         title: L10n.of(context)!.privacyPolicy,
-                        trailing:  Icon(Icons.arrow_forward_ios_sharp,  color: AppLightColorConstants.greyteam1,),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios_sharp,
+                          color: AppLightColorConstants.greyteam1,
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
@@ -115,9 +130,15 @@ class SettingsView extends StatelessWidget {
                         ontap: () {
                           context.router.replace(const SignInViewRoute());
                         },
-                        leading: const Icon(Icons.logout_rounded, color: AppLightColorConstants.bgError,),
+                        leading: const Icon(
+                          Icons.logout_rounded,
+                          color: AppLightColorConstants.bgError,
+                        ),
                         title: L10n.of(context)!.logout,
-                        trailing:  Icon(Icons.arrow_forward_ios_sharp,  color: AppLightColorConstants.greyteam1,),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios_sharp,
+                          color: AppLightColorConstants.greyteam1,
+                        ),
                       ),
                     ],
                   ),

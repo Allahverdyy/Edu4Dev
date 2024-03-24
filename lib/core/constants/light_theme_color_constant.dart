@@ -5,50 +5,34 @@ final class AppLightColorConstants {
   const AppLightColorConstants._();
 
   //base color
-  static const Color primaryColor = Color(0xFF304FFE);
-  static const Color secondaryColor = Color(0xFFFDD835);
   static const Color errorColor = Color(0xFFF44336);
   static const Color successColor = Color(0xFF43A048);
   static const Color warningColor = Color(0xffFB8A00);
-  static const Color infoColor = Color(0xFFB8B8B8);
 
   //button color
-
-  static const Color buttonPrimaryColor = Color(0xFF304FFE);
+  static const Color buttonPrimaryColor = Color(0xffD149B8);
   static const Color buttonDisabledColor = Color(0xFFB8B8B8);
   static const Color buttonErrorColor = Color(0xFFF44336);
-  //background color
 
+  //background color
+  static const Color bgPrimaryColor = Color(0xfff5f5f5);
   static const Color bgLight = Color(0xfff7f7f7);
   static const Color bgInverse = Color(0xFF121212);
-  static const Color bgAccent = Color(0xFF304FFE);
-  static const Color bgSecondary = Color(0xFFFDD835);
   static const Color bgError = Color(0xfff44336);
   static const Color bgSuccess = Color(0xff43A048);
   static const Color bgWarning = Color(0xFFFB8A00);
-  static const Color bgAccentLight = Color(0xffEAEBFF);
-  static const Color bgSecondaryLight = Color(0xFFFFF9C4);
-  static const Color bgErrorLight = Color(0xFFFFEBEE);
-  static const Color bgSuccessLight = Color(0xFFE8F5E9);
-  static const Color bgWarningLight = Color(0xFFFFF3E0);
 
   //text and icon color
-
+  static const Color contentTitle = Color(0xff544E9C);
   static const Color contentPrimary = Color(0xFF2A2A2A);
   static const Color contentSecondary = Color(0xFF414141);
   static const Color contentTeritaryColor = Color(0xFF5A5A5A);
   static const Color contentDisabled = Color(0xFFB8B8B8);
-  static const Color contentAccent = Color(0xFF1E3AE5);
-  static const Color contentSecondaryColor = Color(0xFFF57F17);
   static const Color contentError = Color(0xFFB71B1C);
   static const Color contentSuccess = Color(0xFF1B5E21);
   static const Color contentWarning = Color(0xFF983301);
   static const Color contentOnColor = Colors.white;
   static const Color contentOnInverse = Color(0xFF121212);
-
-  //custom icon and text color
-  static const Color primaryIconColor = Color(0xff444444);
-  static const Color textFormFieldIconColor = Color(0xFFC9C9C9);
 
   //border color
 

@@ -17,11 +17,10 @@ class SplashViewModel extends Bloc<SplashEvent, SplashState> {
     phoneNumber == ''
         ? emit(SplashInitialState(true, state.isVersionCheck))
         : emit(SplashInitialState(false, state.isVersionCheck));
-        Future.delayed( const Duration(seconds: 3), () {
-            state.isNewUser
-                ? event.context.router.replace(OnboardingViewRoute())
-                : event.context.router.replace(OnboardingViewRoute());
-            
-          });
+    Future.delayed(const Duration(seconds: 3), () {
+      state.isNewUser
+          ? event.context.router.replace(const OnboardingViewRoute())
+          : event.context.router.replace(const OnboardingViewRoute());
+    });
   }
 }
