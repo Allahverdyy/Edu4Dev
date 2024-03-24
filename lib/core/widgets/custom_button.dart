@@ -2,10 +2,10 @@ import 'package:edu4dev/app/l10n/app_localizations.dart';
 import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class SpecialButton extends StatelessWidget {
   final void Function()? ontap;
   final String text;
-  const CustomButton({
+  const SpecialButton({
     super.key,
     required this.ontap,
     required this.text,

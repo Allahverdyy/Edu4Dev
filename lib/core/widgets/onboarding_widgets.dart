@@ -55,7 +55,7 @@ Widget OnboardingWidget(
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
-                    color: AppLightColorConstants.bgLight,
+                    color: AppLightColorConstants.buttonPrimaryColor,
                   ),
                 ),
               ),
@@ -74,7 +74,7 @@ Widget OnboardingWidget(
                       height: context.height / 20,
                       alignment: context.acenter,
                       decoration: BoxDecoration(
-                        color: AppLightColorConstants.bgWarning,
+                        color: AppLightColorConstants.buttonPrimaryColor,
                         borderRadius: context.bordercirnormal,
                       ),
                       child: Text(
@@ -91,12 +91,12 @@ Widget OnboardingWidget(
                       width: context.width / 7,
                       height: context.height / 20,
                       decoration: BoxDecoration(
-                        color: AppLightColorConstants.bgWarning,
+                        color: AppLightColorConstants.buttonPrimaryColor,
                         borderRadius: context.bordercirnormal,
                       ),
                       child: const Icon(
                         Icons.arrow_forward_ios_rounded,
-                        color: AppLightColorConstants.bgSuccessLight,
+                        color: AppLightColorConstants.bgPrimaryColor,
                       ),
                     ),
             )
