@@ -8,20 +8,23 @@ import 'dart:convert';
 part 'signup_request_model.freezed.dart';
 part 'signup_request_model.g.dart';
 
-SignUpRequestModel signUpRequestModelFromJson(String str) => SignUpRequestModel.fromJson(json.decode(str));
+SignUpRequestModel signUpRequestModelFromJson(String str) =>
+    SignUpRequestModel.fromJson(json.decode(str));
 
-String signUpRequestModelToJson(SignUpRequestModel data) => json.encode(data.toJson());
+String signUpRequestModelToJson(SignUpRequestModel data) =>
+    json.encode(data.toJson());
 
 @freezed
 class SignUpRequestModel with _$SignUpRequestModel {
-    const factory SignUpRequestModel({
-        required String name,
-        required String surname,
-        required String address,
-        required String phoneNumber,
-        required String email,
-        required String password,
-    }) = _SignUpRequestModel;
+  const factory SignUpRequestModel({
+    required String name,
+    required String surname,
+    required String address,
+    required String phoneNumber,
+    required String email,
+    required String password,
+  }) = _SignUpRequestModel;
 
-    factory SignUpRequestModel.fromJson(Map<String, dynamic> json) => _$SignUpRequestModelFromJson(json);
+  factory SignUpRequestModel.fromJson(Map<String, dynamic> json) =>
+      _$SignUpRequestModelFromJson(json);
 }
