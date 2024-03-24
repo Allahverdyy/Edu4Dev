@@ -1,17 +1,20 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:edu4dev/app/l10n/app_localizations.dart';
+import 'package:edu4dev/app/routes/app_router.gr.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_event.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_state.dart';
 import 'package:edu4dev/app/views/view_signin/viewmodel/signin_view_model.dart';
-import 'package:edu4dev/app/views/view_signup/view/signup_view.dart';
 import 'package:edu4dev/core/constants/light_theme_color_constant.dart';
 import 'package:edu4dev/core/extentions/context_extension.dart';
-import 'package:edu4dev/core/widgets/custom_button.dart';
-import 'package:edu4dev/core/widgets/square_tile.dart';
+import 'package:edu4dev/core/widgets/custom_textfield_widgets.dart';
+import 'package:edu4dev/core/widgets/custombuttons/custom_sign_button.dart';
+import 'package:edu4dev/core/widgets/custom_icon.dart';
 import 'package:edu4dev/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/widgets/bottom_right_top_left_icon_widgets.dart';
 
 @RoutePage()
 class SignInView extends StatelessWidget {
@@ -23,18 +26,30 @@ class SignInView extends StatelessWidget {
       child:
           BlocBuilder<SignInViewModel, SignInState>(builder: (context, state) {
         return Scaffold(
-            backgroundColor: AppLightColorConstants.greyteam2,
-            body: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
+            backgroundColor: AppLightColorConstants.bgPrimaryColor,
+            body: Stack(
+              children: [
+                const BottomRightAndTopLeftIcon(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(
-                      Icons.lock_outline_sharp,
-                      size: 100,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 180.0),
+                      child: Image.asset(
+                        Assets.images.png.imagesEdu4techLogoAlternative.path,
+                        width: context.width * 0.3,
+                      ),
                     ),
                     SizedBox(
-                      height: context.constHighValue,
+                      height: context.constMediumValue,
+                    ),
+                    Text(L10n.of(context)!.signin,
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: AppLightColorConstants.greyteam1)),
+                    SizedBox(
+                      height: context.constLowValue,
                     ),
                     Text(
                       L10n.of(context)!.welcomeback,
@@ -43,37 +58,26 @@ class SignInView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: AppLightColorConstants.greyteam1),
                     ),
-                    Row(
-                      mainAxisAlignment: context.center,
-                      children: [
-                        Text(
-                          L10n.of(context)!.haveAccount,
-                          style: TextStyle(
-                              color: AppLightColorConstants.greyteam1),
-                        ),
-                        TextButton(
-                            onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => const SignUpView()));
-                            },
-                            child: Text(L10n.of(context)!.signup))
-                      ],
+                    SizedBox(
+                      height: context.constNormalValue,
                     ),
                     Column(
                       children: [
                         textInput(
-                          L10n.of(context)!.email,
                           L10n.of(context)!.emailWrite,
                           context,
-                          const Icon(Icons.email_outlined),
                           context.read<SignInViewModel>().emailController,
+                          prefixIcon: const Icon(Icons.email_outlined),
+                        ),
+                        SizedBox(
+                          height: context.constNormalValue,
                         ),
                         textInput(
-                            L10n.of(context)!.password,
-                            L10n.of(context)!.password,
-                            context,
-                            const Icon(Icons.key),
-                            context.read<SignInViewModel>().passwordController),
+                          L10n.of(context)!.passwordWrite,
+                          context,
+                          context.read<SignInViewModel>().passwordController,
+                          prefixIcon: const Icon(Icons.key_outlined),
+                        ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Row(
@@ -83,9 +87,8 @@ class SignInView extends StatelessWidget {
                                   onPressed: () {},
                                   child: Text(
                                     L10n.of(context)!.forgotPassword,
-                                    style: TextStyle(
-                                        color:
-                                            AppLightColorConstants.greyteam1),
+                                    style: const TextStyle(
+                                        color: Color(0xffD149B8)),
                                   ))
                             ],
                           ),
@@ -94,35 +97,64 @@ class SignInView extends StatelessWidget {
                           height: context.constLowValue,
                         ),
                         CustomButton(
-                          ontap: () {
+                          width: context.width / 1.2,
+                          height: context.height / 15,
+                          color: AppLightColorConstants.buttonPrimaryColor,
+                          onTap: () {
                             context
                                 .read<SignInViewModel>()
                                 .add(SignInInitialEvent(context));
                           },
                           text: L10n.of(context)!.signin,
                         ),
+                        Row(
+                          mainAxisAlignment: context.center,
+                          children: [
+                            Text(
+                              L10n.of(context)!.haveAccount,
+                              style: TextStyle(
+                                  color: AppLightColorConstants.greyteam1),
+                            ),
+                            TextButton(
+                                onPressed: () {
+                                  context.router.push(const SignUpViewRoute());
+                                },
+                                child: Text(
+                                  L10n.of(context)!.signup,
+                                  style:
+                                      const TextStyle(color: Color(0xffD149B8)),
+                                ))
+                          ],
+                        ),
                         SizedBox(
-                          height: context.constMediumValue,
+                          height: context.constLowValue,
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Row(
                             children: [
-                              Expanded(
+                              const Expanded(
                                 child: Divider(
                                   thickness: 1,
-                                  color: AppLightColorConstants.greyteam1,
+                                  color:
+                                      AppLightColorConstants.buttonPrimaryColor,
                                 ),
                               ),
                               Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(L10n.of(context)!.orContinue),
+                                child: Text(
+                                  L10n.of(context)!.orContinue,
+                                  style: const TextStyle(
+                                      color: AppLightColorConstants
+                                          .buttonPrimaryColor),
+                                ),
                               ),
-                              Expanded(
+                              const Expanded(
                                 child: Divider(
                                   thickness: 1,
-                                  color: AppLightColorConstants.greyteam1,
+                                  color:
+                                      AppLightColorConstants.buttonPrimaryColor,
                                 ),
                               ),
                             ],
@@ -132,16 +164,13 @@ class SignInView extends StatelessWidget {
                           height: context.constMediumValue,
                         ),
                         Row(
-                          mainAxisAlignment: context.center,
+                          mainAxisAlignment: context.spaceEvenly,
                           children: [
-                            SquareTile(
+                            CustomIcon(
                               imagePath: Assets.icons.png.iconsApple.path,
                               height: context.constHighValue,
                             ),
-                            SizedBox(
-                              width: context.constMediumValue,
-                            ),
-                            SquareTile(
+                            CustomIcon(
                               imagePath: Assets.icons.png.iconsGoogle.path,
                               height: context.constHighValue,
                             )
@@ -151,38 +180,9 @@ class SignInView extends StatelessWidget {
                     )
                   ],
                 ),
-              ),
+              ],
             ));
       }),
-    );
-  }
-
-  Widget textInput(String label, String hintText, BuildContext context,
-      Icon isIcon, TextEditingController controller,
-      {TextInputType? keyboardType,
-      List<TextInputFormatter>? inputFormatters,
-      TextInputAction? textInputAction,
-      String? Function(String?)? validator}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 20),
-        Text(label, style: Theme.of(context).textTheme.titleMedium),
-        const SizedBox(height: 10),
-        SizedBox(
-          child: TextFormField(
-            controller: controller,
-            inputFormatters: inputFormatters,
-            autovalidateMode: AutovalidateMode.onUserInteraction,
-            keyboardType: keyboardType ?? TextInputType.text,
-            decoration: InputDecoration(
-                contentPadding: const EdgeInsets.only(top: 10, left: 10),
-                prefixIcon: isIcon,
-                hintText: hintText,
-                border: const OutlineInputBorder()),
-          ),
-        )
-      ],
     );
   }
 }

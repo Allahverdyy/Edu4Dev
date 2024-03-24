@@ -6,3 +6,8 @@ class SignUpInitialEvent extends SignUpEvent {
   BuildContext context;
   SignUpInitialEvent(this.context);
 }
+
+// class SignUpVisibilityEvent extends SignUpEvent {
+//   bool visibilityText = true;
+//   SignUpVisibilityEvent(this.visibilityText);
+// }

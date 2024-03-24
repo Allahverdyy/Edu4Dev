@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:edu4dev/app/routes/app_router.gr.dart';
